@@ -30,7 +30,10 @@ def download_and_cut(videoid,start,end,subfolder,move_name):
         print 'video "%s.avi" already created'% move_name
     s=int((datetime.strptime(start, FMT)-datetime(1900,1,1)).total_seconds() ) 
     e=int((datetime.strptime(end, FMT)-datetime(1900,1,1)).total_seconds() ) 
-    url='http://www.youtube.com/v/%s?start=%d&end=%d&autoplay=1'%(videoid ,s,e)
+    url='http://www.youtube.com/v/%s?start=%d&end=%d&autoplay=1&loop=1'%(videoid ,s,e)
+    url='http://www.infinitelooper.com/?v=%s#/%d;%d'%(videoid ,s,e)
+    #coul use http://loopthetube.com/#FB1cCoib7xQ&start=41.948&end=46.915
+   
     f.write('* [%s](%s)\n'%(move_name,url))
 
 download_and_cut('mLkkUDXE65Y','00:00:21','00:00:26','level 1/6 counts','barrel roll')
