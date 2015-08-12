@@ -28,41 +28,42 @@ You can transfert these videos to you smartphone and check you lindy hop moves f
 
 ##Existing moves
 
-*barrel_roll
-*lindy_circle
-*lindy_circle_from_open
-*swing out from closed
-*swing out from open
-*texas tommy
-*texas tommy2
-*texas tommy from closed
-*inside turn swingout from open
-*inside turn swingout fromclosed
-*the nothing
-*she goes
-*treading water
-*he goes
-*tuck turn
-*sugar push
-*kick through
-*under arm turn
-*send out
-*side pass
-*she goes he goes
-*promenade
-*reverse promenade
-*cudle
-*sweetheart
-*belt slide
-*lindy hop basket
-*tandem charleston
-*tandem charleston2
-*tandem - Windshield wiper
-*tandem - follower turn
-*tandem - Push away exit
-*Airplane Charleston 
-*s-turn into tandem charleston
-*scoots
+* barrel_roll
+* lindy_circle
+* lindy_circle_from_open
+* swing out from closed
+* swing out from open
+* texas tommy
+* texas tommy2
+* texas tommy from closed
+* inside turn swingout from open
+* inside turn swingout fromclosed
+* the nothing
+* she goes
+* treading water
+* he goes
+* tuck turn
+* sugar push
+* kick through
+* under arm turn
+* send out
+* side pass
+* she goes he goes
+* promenade
+* reverse promenade
+* cudle
+* sweetheart
+* belt slide
+* lindy hop basket
+* tandem charleston
+* tandem charleston2
+* tandem - Windshield wiper
+* tandem - follower turn
+* tandem - Push away exit
+* Airplane Charleston 
+* s-turn into tandem charleston
+* scoots
+
 ## TODO
 
 Using OpenCV we could improve the quality of the vidoes by running some video stabilization method, background substraction and contrast enhancement.
