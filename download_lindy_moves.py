@@ -7,6 +7,8 @@ import os.path
 download_folder = os.path.join('.','original_videos')
 target_folder   = os.path.join('.','edited_videos')
 rewriteAll=False # set this value to true if you want to recreate existing videos, or simply delet the existing videos in the file explorator
+f = open('listmoves.md', 'w')
+f.write('##Existing moves\n\n')
 
 def download_and_cut(videoid,start,end,subfolder,move_name):
     FMT = '%H:%M:%S'
@@ -26,10 +28,14 @@ def download_and_cut(videoid,start,end,subfolder,move_name):
         os.system(command)
     else:
         print 'video "%s.avi" already created'% move_name
+    s=int((datetime.strptime(start, FMT)-datetime(1900,1,1)).total_seconds() ) 
+    e=int((datetime.strptime(end, FMT)-datetime(1900,1,1)).total_seconds() ) 
+    url='http://www.youtube.com/v/%s?start=%d&end=%d&autoplay=1'%(videoid ,s,e)
+    f.write('* [%s](%s)\n'%(move_name,url))
 
-download_and_cut('mLkkUDXE65Y','00:00:21','00:00:26','level 1/6 counts','barrel_roll')
-download_and_cut('CF0KIsQR6A4','00:02:25','00:02:30','level 1/8 counts','lindy_circle' )
-download_and_cut('pnWF9Lb7QaU','00:01:27','00:01:34','level 1/8 counts','lindy_circle_from_open' ) 
+download_and_cut('mLkkUDXE65Y','00:00:21','00:00:26','level 1/6 counts','barrel roll')
+download_and_cut('CF0KIsQR6A4','00:02:25','00:02:30','level 1/8 counts','lindy circle' )
+download_and_cut('pnWF9Lb7QaU','00:01:27','00:01:34','level 1/8 counts','lindy circle from open' ) 
 download_and_cut('YSnlHV_GCA0','00:01:00','00:01:04','level 1/8 counts','swing out from closed')
 download_and_cut('YSnlHV_GCA0','00:01:07','00:01:11','level 1/8 counts','swing out from open')
 download_and_cut('YSnlHV_GCA0','00:01:24','00:01:29','level 1/8 counts','texas tommy' )
@@ -62,6 +68,10 @@ download_and_cut('jU0NWSu2x0o','00:00:59','00:01:07','level 1/8 counts','tandem 
 download_and_cut('-eQaOZXJdkA','00:00:19','00:00:30','level 1/8 counts','Airplane Charleston ')
 download_and_cut('5MEfGPNf3nE','00:00:33','00:00:43','level 1/8 counts','s-turn into tandem charleston')
 download_and_cut('0nbTtgY-aQ8','00:00:31','00:00:41','level 1/8 counts','scoots')
+
+
+
+    
 
 
 
