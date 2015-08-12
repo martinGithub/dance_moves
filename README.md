@@ -1,9 +1,10 @@
 # lindy hop moves
 This project contains a python script that downloads videos and edit them automatically to get a short video for each lindy move of about 5s.
-You can tranfert these video to you smartphone and check you lindy hop moves from everywhere
+You can tranfert these videos to you smartphone and check you lindy hop moves from everywhere
 
-Using the application AVPlayer on android you can loop the video intil you get it !
-Using the VLC player on android you can visualize in slow motion
+## Video Players
+* Using the application *AVPlayer* on android you can loop the video until you fully understand the move.
+* Using the *VLC player* on android you can visualize in slow motion
 
 ## Installation
 
@@ -21,13 +22,13 @@ Using the VLC player on android you can visualize in slow motion
 
 ## Execution
 
-by default the original youtube videos and the edited videos will be created repectively in the subfolders edited_videos and original_videos
-you can change that by editing download_lindy_moves.py or you can create local symbolic links with this names that link to folder located somewhere else in the system
-the in order tu run the script you simply call python download_lindy_moves.py from the command line
+* By default the original youtube videos and the edited videos will be created repectively in the subfolders *edited_videos* and *original_videos*.
+* You can change that by editing *download_lindy_moves.py* or you can create local symbolic links with this names that link to folder located somewhere else in the system
+* In order to run the script you simply call python download_lindy_moves.py from the command line
 
 ## TODO
 
-Using Opencv we could improve the quality of the vidoes by running some video stabilization method, background substraction and contrast enhancement.
+Using OpenCV we could improve the quality of the vidoes by running some video stabilization method, background substraction and contrast enhancement.
 we could also denoise the sound on some videos.
 
 
