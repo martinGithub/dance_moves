@@ -1,10 +1,10 @@
 # Lindy Hop Moves Videos Maker
-This project contains a python script that downloads videos from *youtube* and edit them automatically to create on your computer a short video file of about 5s for each lindy move listed below. You can transfer these video files to your smartphone and watch them whenever you forgot the details of a move.
+This project contains a python script that downloads videos from *youtube* and edit them automatically to create on your computer a short video file of about 5s for each Lindy Hop move listed below. You can transfer these video files to your smartphone and watch them whenever you forgot the details of a move.
 
 ## Mobile Video Players 
 
 * Using the application *AVPlayer* on android you can loop the video until you fully understand the move.
-* Using the *VLC player* on android you can visualize a video in slow motion
+* Using the *VLC player* on android you can visualize a video in slow motion.
 
 ##Existing moves
 
@@ -49,9 +49,9 @@ This project contains a python script that downloads videos from *youtube* and e
 ### Windows installation
 
 
- * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64.msi
+ * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64.msi.
  * install youtube-dl: from the [command prompt] (http://www.7tutorials.com/7-ways-launch-command-prompt-windows-7-windows-8) type : pip install youtube-dl
- * install libav: http://builds.libav.org/windows/nightly-gpl/libav-i686-w64-mingw32-20141125.7z, you can use [7zip](http://www.7-zip.org/) to decompress the file
+ * install libav: http://builds.libav.org/windows/nightly-gpl/libav-i686-w64-mingw32-20141125.7z, you can use [7zip](http://www.7-zip.org/) to decompress the file.
 
 ### Linux (Ubuntu) installation
  in a terminal: 
@@ -61,7 +61,7 @@ This project contains a python script that downloads videos from *youtube* and e
 ## Execution
 
 * By default the original youtube videos and the edited videos will be created respectively in the subfolders *edited_videos* and *original_videos*.
-* You can change that by editing *download_lindy_moves.py* or you can create local symbolic links with this names that link to folder located somewhere else in the system
+* You can change that by editing *download_lindy_moves.py* or you can create local symbolic links with this names that link to folder located somewhere else in the system.
 * In order to run the script you simply call *python download_lindy_moves.py* from the [command prompt] (http://www.7tutorials.com/7-ways-launch-command-prompt-windows-7-windows-8) in windows or in a terminal in linux.
 
 ## TODO
