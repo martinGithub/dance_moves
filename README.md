@@ -51,7 +51,7 @@ This project contains a python script that downloads videos from *youtube* and e
 
  * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64.msi
  * install youtube-dl: from the [command prompt] (http://www.7tutorials.com/7-ways-launch-command-prompt-windows-7-windows-8) type : pip install youtube-dl
- * install libav: http://builds.libav.org/windows/nightly-gpl/libav-i686-w64-mingw32-20141125.7z, you can use [7sip](http://www.7-zip.org/) to decompress the file
+ * install libav: http://builds.libav.org/windows/nightly-gpl/libav-i686-w64-mingw32-20141125.7z, you can use [7zip](http://www.7-zip.org/) to decompress the file
 
 ### Linux (Ubuntu) installation
  in a terminal: 
