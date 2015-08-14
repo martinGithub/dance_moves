@@ -32,10 +32,19 @@ def download_and_cut(videoid,start,end,subfolder,move_name):
     e=int((datetime.strptime(end, FMT)-datetime(1900,1,1)).total_seconds() ) 
     url='http://www.youtube.com/v/%s?start=%d&end=%d&autoplay=1&loop=1'%(videoid ,s,e)
     url='http://www.infinitelooper.com/?v=%s#/%d;%d'%(videoid ,s,e)
+    url='https://www.yourepeat.com/watch/?v=%s&start_at=%d&end_at=%d'%(videoid ,s,e)
     #coul use http://loopthetube.com/#FB1cCoib7xQ&start=41.948&end=46.915
    
     f.write('* [%s](%s)\n'%(move_name,url))
+    
 
+download_and_cut('HYcuxW5_ilg','00:00:25','00:00:31','level 1/8 counts','arm catch 8 step')
+download_and_cut('HYcuxW5_ilg','00:00:32','00:00:38','level 1/10 counts','arm catch double turn')
+download_and_cut('HYcuxW5_ilg','00:01:03','00:01:12','level 1/8 counts','arm catch double turn to texas tommy ')
+download_and_cut('JwkFqwdFbNI','00:00:08','00:00:14','level 1/8 counts','arm hook')
+download_and_cut('h9s05OCKfFs','00:00:01','00:00:06','level 1/6 counts','around the back aerial')
+download_and_cut('anNXA6YZ3Ug','00:01:17','00:01:23','level 1/8 counts','around the world tandem charleston')
+download_and_cut('n0Me9s2qPEU','00:02:11','00:02:18','level 1/8 counts','candle stick aka ace in the hole aerial')
 download_and_cut('mLkkUDXE65Y','00:00:21','00:00:26','level 1/6 counts','barrel roll')
 download_and_cut('CF0KIsQR6A4','00:02:25','00:02:30','level 1/8 counts','lindy circle' )
 download_and_cut('pnWF9Lb7QaU','00:01:27','00:01:34','level 1/8 counts','lindy circle from open' ) 
@@ -67,14 +76,11 @@ download_and_cut('hlkp-XMeQOM','00:01:05','00:01:22','level 1/8 counts','tandem 
 download_and_cut('jU0NWSu2x0o','00:00:28','00:00:37','level 1/8 counts','tandem charleston2')
 download_and_cut('jU0NWSu2x0o','00:00:35','00:00:46','level 1/8 counts','tandem - Windshield wiper')
 download_and_cut('jU0NWSu2x0o','00:00:49','00:00:57','level 1/8 counts','tandem - follower turn')
-download_and_cut('jU0NWSu2x0o','00:00:59','00:01:07','level 1/8 counts','tandem - Push away exit')
-download_and_cut('-eQaOZXJdkA','00:00:19','00:00:30','level 1/8 counts','Airplane Charleston ')
+download_and_cut('jU0NWSu2x0o','00:00:59','00:01:07','level 1/8 counts','tandem - push away exit')
+download_and_cut('-eQaOZXJdkA','00:00:19','00:00:30','level 1/8 counts','airplane charleston ')
 download_and_cut('5MEfGPNf3nE','00:00:33','00:00:43','level 1/8 counts','s-turn into tandem charleston')
 download_and_cut('0nbTtgY-aQ8','00:00:31','00:00:41','level 1/8 counts','scoots')
-
-
-
-    
+download_and_cut('HYcuxW5_ilg','00:00:31','00:00:41','level 1/8 counts','scoots')
 
 
 
