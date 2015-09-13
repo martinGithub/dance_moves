@@ -89,6 +89,11 @@ This project somehow complements the website http://www.lindysteps.com that does
 Using OpenCV we could improve the quality of the videos by running some video stabilisation method, background substraction and contrast enhancement.
 We could also denoise the sound on some videos.
 
+## GIFS
+
+
+![Image](http://cdn.yourepeat.com/media/gif/002/499/901/1c9742f5c51469acb193029dcdf6e58e.gif?raw=true)
+
 
 
 
