@@ -72,7 +72,7 @@ This project somehow complements the website http://www.lindysteps.com that does
  * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64.msi.
  * install youtube-dl: from the [command prompt] (http://www.7tutorials.com/7-ways-launch-command-prompt-windows-7-windows-8) type : pip install youtube-dl
  * install libav: http://builds.libav.org/windows/nightly-gpl/libav-i686-w64-mingw32-20141125.7z, you can use [7zip](http://www.7-zip.org/) to decompress the file.
-* download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip)
+ * download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip)
 
 ### Linux (Ubuntu) installation
  in a terminal: 
