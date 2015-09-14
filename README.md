@@ -76,6 +76,7 @@ This project somehow complements the website http://www.lindysteps.com that does
 ### Mac OS installation
 
  * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10-macosx10.6.pkg (note that recent version of Mac OS X should comes with Python 2.7 out of the box)
+
  in a terminal: 
  * sudo pip install youtube-dl
  * sudo apt-get install libav-tools
