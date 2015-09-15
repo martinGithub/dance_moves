@@ -6,8 +6,8 @@ import os.path
 
 download_folder = os.path.join('.','original_videos')
 target_folder   = os.path.join('.','edited_videos')
-rewriteAll=False # set this value to true if you want to recreate existing videos, or simply delet the existing videos in the file explorator
-
+rewriteAll=True # set this value to true if you want to recreate existing videos, or simply delet the existing videos in the file explorator
+use_ffmpeg=False
 movesUrlsDict=dict()
 
 def download_and_cut(videoid,start,end,subfolder,move_name):
@@ -19,13 +19,23 @@ def download_and_cut(videoid,start,end,subfolder,move_name):
     if  not(os.path.isdir(target_folder_full)):
         os.makedirs(target_folder_full)
     targetvideofile=os.path.join(target_folder_full,'%s.avi'%move_name)
+    targetgiffile=os.path.join(target_folder_full,'%s.gif'%move_name)
     if not(os.path.isfile(targetvideofile)) or rewriteAll:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             if not(os.path.isfile(videofile)):
-                ydl.download(['http://www.youtube.com/watch?v=%s'%videoid])    
-        command='avconv -i %s -c:v libx264 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetvideofile)
+                ydl.download(['http://www.youtube.com/watch?v=%s'%videoid]) 
+        if use_ffmpeg:
+            command='ffmpeg -i %s -y -c:v libx264 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetvideofile)
+        else:   
+            command='avconv -i %s -y -c:v libx264 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetvideofile)
         print command
         os.system(command)
+        if use_ffmpeg:
+            command='ffmpeg -i %s  -y -vsync 1  -pix_fmt rgb24 -r 5 -s 320x240 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetgiffile)
+        else:
+            command='avconv -i %s  -y -vsync 1 -dither None -pix_fmt rgb24 -r 5 -s 320x240 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetgiffile)
+        os.system(command)
+        
     else:
         print 'video "%s.avi" already created'% move_name
     s=int((datetime.strptime(start, FMT)-datetime(1900,1,1)).total_seconds() ) 

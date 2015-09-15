@@ -77,10 +77,17 @@ This project somehow complements the website http://www.lindysteps.com that does
 
  * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10-macosx10.6.pkg (note that recent version of Mac OS X should comes with Python 2.7 out of the box)
 
+
  in a terminal: 
- * sudo pip install youtube-dl
- * sudo apt-get install libav-tools
+ * sudo pip install youtube-dl (note that it is normal that there are no asterisk appearing when you type your password http://osxdaily.com/2015/02/04/terminal-wont-show-password-when-typed/)
+ * ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
+ * brew install libav
  * download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip)
+
+if you stuggle installing libav you can instead use ffmpeg:
+
+* download ffmpeg here [here] (http://ffmpegmac.net/) or [here](http://evermeet.cx/ffmpeg/ffmpeg-2.8.7z) and extract it in the same folder as the python script
+* in the script *download_lindy_moves.py* replace *use_ffmpeg=False* by *use_ffmpeg=True*
 
  
 
@@ -89,6 +96,15 @@ This project somehow complements the website http://www.lindysteps.com that does
  * sudo pip install youtube-dl
  * sudo apt-get install libav-tools
  * download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip)
+
+if you stuggle installing libav you can instead use ffmpeg:
+ in a terminal:
+* sudo add-apt-repository ppa:mc3man/trusty-media
+* sudo apt-get update
+* sudo apt-get dist-upgrade
+* sudo apt-get ffmpeg
+* in the script *download_lindy_moves.py* replace *use_ffmpeg=False* by *use_ffmpeg=True*
+
 
 ## Execution
 
@@ -100,6 +116,7 @@ This project somehow complements the website http://www.lindysteps.com that does
 
 Using OpenCV we could improve the quality of the videos by running some video stabilisation method, background substraction and contrast enhancement.
 We could also denoise the sound on some videos.
+We could use avconvert when executed on Mac OS (from OS X Lion) to avoid the installation of libav or ffmpeg.
 
 ## GIFS
 
