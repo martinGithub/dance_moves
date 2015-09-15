@@ -8,6 +8,7 @@ download_folder = os.path.join('.','original_videos')
 target_folder   = os.path.join('.','edited_videos')
 rewriteAll=True # set this value to true if you want to recreate existing videos, or simply delet the existing videos in the file explorator
 use_ffmpeg=False
+generate_gifs=False
 movesUrlsDict=dict()
 
 def download_and_cut(videoid,start,end,subfolder,move_name):
@@ -30,11 +31,12 @@ def download_and_cut(videoid,start,end,subfolder,move_name):
             command='avconv -i %s -y -c:v libx264 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetvideofile)
         print command
         os.system(command)
-        if use_ffmpeg:
-            command='ffmpeg -i %s  -y -vsync 1  -pix_fmt rgb24 -r 5 -s 320x240 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetgiffile)
-        else:
-            command='avconv -i %s  -y -vsync 1 -dither None -pix_fmt rgb24 -r 5 -s 320x240 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetgiffile)
-        os.system(command)
+        if generate_gifs:           
+            if use_ffmpeg:
+                command='ffmpeg -i %s  -y -vsync 1  -pix_fmt rgb24 -r 5 -s 320x240 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetgiffile)
+            else:
+                command='avconv -i %s  -y -vsync 1 -pix_fmt rgb24 -r 5 -s 320x240 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetgiffile)
+            os.system(command)
         
     else:
         print 'video "%s.avi" already created'% move_name
