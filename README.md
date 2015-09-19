@@ -86,13 +86,17 @@ This project somehow complements the website http://www.lindysteps.com that does
 
 ## Execution
 
-* By default the original youtube videos and the edited videos will be created respectively in the subfolders *edited_videos* and *original_videos*.
-* You can change that by editing *download_lindy_moves.py* or you can create local symbolic links with this names that link to folder located somewhere else in the system.
+
 In order to run the script you can either 
+
 *  double-click on *download_lindy_moves.py* in Windows and Mac OS (assuming you have setup PythonLauncher as the default application for python scripts) 
 
 * open a terminal on Mac OS or Linux, or the [command prompt](http://www.7tutorials.com/7-ways-launch-command-prompt-windows-7-windows) in Windows, then move to the decompressed folder using the *cd* command and then call *python download_lindy_moves.py*. 
 
+
+By default the original youtube videos and the edited videos will be created respectively in the subfolders *edited_videos* and *original_videos*.You can change that by editing *download_lindy_moves.py* or you can create local symbolic links with this names that link to folder located somewhere else in the system.
+
+## TODO
 Using OpenCV we could improve the quality of the videos by running some video stabilisation method, background substraction and contrast enhancement.
 We could also denoise the sound on some videos.
 We could use avconvert when executed on Mac OS (from OS X Lion) to avoid the installation of libav or ffmpeg.
