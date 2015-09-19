@@ -88,7 +88,7 @@ This project somehow complements the website http://www.lindysteps.com that does
 
 * By default the original youtube videos and the edited videos will be created respectively in the subfolders *edited_videos* and *original_videos*.
 * You can change that by editing *download_lindy_moves.py* or you can create local symbolic links with this names that link to folder located somewhere else in the system.
-* In order to run the script you simply call *python download_lindy_moves.py* from the [command prompt] (http://www.7tutorials.com/7-ways-launch-command-prompt-windows-7-windows-8) in windows or in a terminal in linux.
+* In order to run the script you double-click on *download_lindy_moves.py* in Windows or open a terminal on Mac OS or Linux, move to the decompressed folder using the *cd* command and then call *python download_lindy_moves.py* 
 
 ## TODO
 
