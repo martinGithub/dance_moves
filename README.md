@@ -77,7 +77,7 @@ This project somehow complements the website http://www.lindysteps.com that does
 * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10-macosx10.6.pkg (note that recent version of Mac OS X should comes with Python 2.7 out of the box)
 * download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip) an decompress it 
 * in the terminal, move in the decompressed folder using the *cd* command and type *sudo python setup.py*, this will install automatically the dependencies (*youtube-dl* and *ffmpeg*)
- 
+* you can now select PythonLauncher as the default application to open python scripts  through the finder Info window
 
 ### Linux (Ubuntu) installation 
 
@@ -88,9 +88,10 @@ This project somehow complements the website http://www.lindysteps.com that does
 
 * By default the original youtube videos and the edited videos will be created respectively in the subfolders *edited_videos* and *original_videos*.
 * You can change that by editing *download_lindy_moves.py* or you can create local symbolic links with this names that link to folder located somewhere else in the system.
-* In order to run the script you double-click on *download_lindy_moves.py* in Windows or open a terminal on Mac OS or Linux, move to the decompressed folder using the *cd* command and then call *python download_lindy_moves.py* 
+In order to run the script you can either 
+*  double-click on *download_lindy_moves.py* in Windows and Mac OS (assuming you have setup PythonLauncher as the default application for python scripts) 
 
-## TODO
+* open a terminal on Mac OS or Linux, or the [command prompt](http://www.7tutorials.com/7-ways-launch-command-prompt-windows-7-windows) in Windows, then move to the decompressed folder using the *cd* command and then call *python download_lindy_moves.py*. 
 
 Using OpenCV we could improve the quality of the videos by running some video stabilisation method, background substraction and contrast enhancement.
 We could also denoise the sound on some videos.
