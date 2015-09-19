@@ -70,13 +70,13 @@ This project somehow complements the website http://www.lindysteps.com that does
 
 * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64.msi.
 * download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip) an decompress it 
-* double click on *setup.py*, this will install automatically the dependencies (*youtube-dl* and $libav$). 
+* double click on *setup.py*, this will install automatically the dependencies (*youtube-dl* and *libav*). 
 
 ### Mac OS installation
 
- * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10-macosx10.6.pkg (note that recent version of Mac OS X should comes with Python 2.7 out of the box)
+* install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10-macosx10.6.pkg (note that recent version of Mac OS X should comes with Python 2.7 out of the box)
 * download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip) an decompress it 
-* in the terminal, move in the decompressed folder using the $cd$ command and type *sudo python setup.py*, this will install automatically the dependencies (*youtube-dl* and $ffmpeg$)
+* in the terminal, move in the decompressed folder using the $cd$ command and type *sudo python setup.py*, this will install automatically the dependencies (*youtube-dl* and *ffmpeg*)
  
 
 ### Linux (Ubuntu) installation 
