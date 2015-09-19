@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 import youtube_dl
 import os
-from datetime import datetime
+from datetime import datetime,timedelta
 import os.path
 import platform
 system=platform.system()
@@ -29,8 +29,9 @@ else:
 generate_gifs=False
 movesUrlsDict=dict()
 
-def download_and_cut(videoid,start,end,subfolder,move_name):
+def download_and_cut(videoid,start,end,level,beatcount,move_name):
     FMT = '%H:%M:%S'
+    subfolder=level+'/'+beatcount
     videofile='%s.avi'%os.path.join(download_folder,videoid)
     tdelta = str(datetime.strptime(end, FMT) - datetime.strptime(start, FMT))
     ydl_opts = {'outtmpl':videofile}
@@ -60,24 +61,48 @@ def download_and_cut(videoid,start,end,subfolder,move_name):
     url='http://www.infinitelooper.com/?v=%s#/%d;%d'%(videoid ,s,e)
     url='https://www.yourepeat.com/watch/?v=%s&start_at=%d&end_at=%d'%(videoid ,s,e)
     #coul use http://loopthetube.com/#FB1cCoib7xQ&start=41.948&end=46.915
-    movesUrlsDict[move_name]=url
+    movesUrlsDict[move_name]={'url':url,'level':level,'beatcount':beatcount}
+    
     
     
 
 #download_and_cut('HYcuxW5_ilg','00:00:25','00:00:31','level 1/8 counts','arm catch 8 step')
-with open('moves.csv', 'rb') as csvfile:
-    reader = csv.reader(csvfile, delimiter=str(','), quotechar=str('|'))
-    for row in reader:
-        if not row==[]:
-            download_and_cut(*row)
-        else:
-            print 'empty row'
+#with open('moves.csv', 'rb') as csvfile:
+    #reader = csv.reader(csvfile, delimiter=str(','), quotechar=str('|'))
+    #for row in reader:
+        #if not row==[]:
+            #download_and_cut(*row)
+        #else:
+            #print 'empty row'
+            
+with  open('listmoves.md', 'r') as f:
+
+    f.readline()#skipping the first to line that are the header of the table
+    f.readline()
+    lines = f.readlines()
+    for line in lines:
+        columns=line.split('|')
+        s=columns[1]
+        url=s[s.find("(")+1:s.find(")")]
+        move_name=s[s.find("[")+1:s.find("]")]
+        t=url.split('&')
+        beatcount=columns[2]
+        level=columns[3]
+        videoid=t[0][t[0].find('?v=')+2:]
+        start=str(timedelta(seconds=int(t[1][9:])))
+        end=str(timedelta(seconds=int(t[2][7:])))
+        download_and_cut(videoid, start, end, level, beatcount, move_name)
         
-f = open('listmoves.md', 'w')
-f.write('##Existing moves\n\n')
-for move_name in sorted(movesUrlsDict.keys()):
-    f.write('* [%s](%s)\n'%(move_name,movesUrlsDict[move_name]))
-f.close()
+        
+
+
+#f = open('listmoves.md', 'w')
+#f.write('| Name  | beatcount | level|\n')
+#f.write('| --- |:-------:| -----:|\n')
+#for move_name in sorted(movesUrlsDict.keys()):
+    #d=movesUrlsDict[move_name]
+    #f.write('| [%s](%s)|%s|%s|\n'%(move_name,d['url'],d['beatcount'],d['level']))
+#f.close()
 
 
 
