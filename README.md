@@ -1,5 +1,5 @@
 # Lindy Hop Moves Videos Maker
-This project contains a python script that downloads videos from *youtube* and edit them automatically to create on your computer a short video file of about 5s for each Lindy Hop move listed below. You can transfer these video files to your smartphone and watch them whenever you forgot the details of a move.
+This project contains a python script that downloads videos from *youtube* and edit them automatically to create on your computer a short video file of about 5s for each Lindy Hop move listed [here](listmoves.md). You can transfer these video files to your smartphone and watch them whenever you forgot the details of a move.
 
 This project somehow complements the website http://www.lindysteps.com that does not provide a way to download edited version of the video on a mobile.
 
