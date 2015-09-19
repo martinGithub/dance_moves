@@ -3,11 +3,29 @@ import youtube_dl
 import os
 from datetime import datetime
 import os.path
+import platform
+system=platform.system()
+
+import subprocess
 
 download_folder = os.path.join('.','original_videos')
 target_folder   = os.path.join('.','edited_videos')
 rewriteAll=True # set this value to true if you want to recreate existing videos, or simply delet the existing videos in the file explorator
-use_ffmpeg=False
+
+
+
+if system=='Windows':
+    aviconv_executable='"./libav/avconv"'
+elif system=='Linux':
+    aviconv_executable='avconv'
+elif system=='Darwin':
+    aviconv_executable='ffmpeg'
+    
+else:
+    print 'unreckognized OS'
+    raise
+    
+    
 generate_gifs=False
 movesUrlsDict=dict()
 
@@ -25,18 +43,14 @@ def download_and_cut(videoid,start,end,subfolder,move_name):
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             if not(os.path.isfile(videofile)):
                 ydl.download(['http://www.youtube.com/watch?v=%s'%videoid]) 
-        if use_ffmpeg:
-            command='ffmpeg -i %s -y -c:v libx264 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetvideofile)
-        else:   
-            command='avconv -i %s -y -c:v libx264 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetvideofile)
+          
+        command=aviconv_executable+' -i %s -y -c:v libx264 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetvideofile)
         print command
-        os.system(command)
+        subprocess.call(command,shell=True)
         if generate_gifs:           
-            if use_ffmpeg:
-                command='ffmpeg -i %s  -y -vsync 1  -pix_fmt rgb24 -r 5 -s 320x240 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetgiffile)
-            else:
-                command='avconv -i %s  -y -vsync 1 -pix_fmt rgb24 -r 5 -s 320x240 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetgiffile)
-            os.system(command)
+            
+            command=aviconv_executable+' -i %s  -y -vsync 1 -pix_fmt rgb24 -r 5 -s 320x240 -ss %s -t %s "%s"'%(videofile,start,tdelta,targetgiffile)
+            subprocess.call(command,shell=True)
         
     else:
         print 'video "%s.avi" already created'% move_name

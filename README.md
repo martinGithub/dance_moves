@@ -68,43 +68,21 @@ This project somehow complements the website http://www.lindysteps.com that does
 
 ### Windows installation
 
- * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64.msi.
- * install youtube-dl: from the [command prompt] (http://www.7tutorials.com/7-ways-launch-command-prompt-windows-7-windows-8) type : pip install youtube-dl
- * install libav: http://builds.libav.org/windows/nightly-gpl/libav-i686-w64-mingw32-20141125.7z, you can use [7zip](http://www.7-zip.org/) to decompress the file.
- * download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip)
+* install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64.msi.
+* download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip) an decompress it 
+* double click on *setup.py*, this will install automatically the dependencies (*youtube-dl* and $libav$). 
 
 ### Mac OS installation
 
  * install python from https://www.python.org/ftp/python/2.7.10/python-2.7.10-macosx10.6.pkg (note that recent version of Mac OS X should comes with Python 2.7 out of the box)
-
-
- in a terminal: 
- * sudo pip install youtube-dl (note that it is normal that there are no asterisk appearing when you type your password http://osxdaily.com/2015/02/04/terminal-wont-show-password-when-typed/)
- * ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
- * brew install libav
- * download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip)
-
-if you stuggle installing libav you can instead use ffmpeg:
-
-* download ffmpeg here [here] (http://ffmpegmac.net/) or [here](http://evermeet.cx/ffmpeg/ffmpeg-2.8.7z) and extract it in the same folder as the python script
-* in the script *download_lindy_moves.py* replace *use_ffmpeg=False* by *use_ffmpeg=True*
-
+* download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip) an decompress it 
+* in the terminal, move in the decompressed folder using the $cd$ command and type *sudo python setup.py*, this will install automatically the dependencies (*youtube-dl* and $ffmpeg$)
  
 
-### Linux (Ubuntu) installation
- in a terminal: 
- * sudo pip install youtube-dl
- * sudo apt-get install libav-tools
- * download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip)
+### Linux (Ubuntu) installation 
 
-if you stuggle installing libav you can instead use ffmpeg:
- in a terminal:
-* sudo add-apt-repository ppa:mc3man/trusty-media
-* sudo apt-get update
-* sudo apt-get dist-upgrade
-* sudo apt-get ffmpeg
-* in the script *download_lindy_moves.py* replace *use_ffmpeg=False* by *use_ffmpeg=True*
-
+* download the zip file of the project [here] (https://github.com/martinGithub/lindy_hop_moves/archive/master.zip) an decompress it 
+* in the terminal, move in the decompressed folder and type *sudo python setup.py*, this will install automatically the dependencies (*youtube-dl* and $libav$)
 
 ## Execution
 
