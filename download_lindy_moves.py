@@ -68,7 +68,10 @@ def download_and_cut(videoid,start,end,subfolder,move_name):
 with open('moves.csv', 'rb') as csvfile:
     reader = csv.reader(csvfile, delimiter=str(','), quotechar=str('|'))
     for row in reader:
-        download_and_cut(*row)
+        if not row==[]:
+            download_and_cut(*row)
+        else:
+            print 'empty row'
         
 f = open('listmoves.md', 'w')
 f.write('##Existing moves\n\n')
