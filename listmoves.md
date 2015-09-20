@@ -44,8 +44,8 @@
 | [tandem charleston](https://www.yourepeat.com/watch/?v=hlkp-XMeQOM&start_at=65&end_at=82)|8 counts|level 1|
 | [tandem charleston2](https://www.yourepeat.com/watch/?v=jU0NWSu2x0o&start_at=28&end_at=37)|8 counts|level 1|
 | [texas tommy ](https://www.yourepeat.com/watch/?v=YSnlHV_GCA0&start_at=84&end_at=89)|8 counts|level 1|
-| [texas tommy from closed](https://www.yourepeat.com/watch/?v=GzyQldsVDb0&start_at=15&end_at=21)|8 counts|level 1|
 | [texas tommy2](https://www.yourepeat.com/watch/?v=U9PJO-Keu-M&start_at=64&end_at=71)|8 counts|level 1|
+| [texas tommy from closed](https://www.yourepeat.com/watch/?v=GzyQldsVDb0&start_at=15&end_at=21)|8 counts|level 1|
 | [the nothing](https://www.yourepeat.com/watch/?v=rfUdoXikhMc&start_at=17&end_at=21)|8 counts|level 1|
 | [traveling charleston](https://www.yourepeat.com/watch/?v=aoMux5a-32c&start_at=21&end_at=34)|8 counts|level 1|
 | [treading water ](https://www.yourepeat.com/watch/?v=rbxqTcKj2U8&start_at=33&end_at=39)|8 counts|level 1|

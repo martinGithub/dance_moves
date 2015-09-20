@@ -13,7 +13,6 @@ This project somehow complements the website http://www.lindysteps.com that does
 You can consult the list of moves [here](listmoves.md).
 You can add moves by editing this file if you are a collaborator.
 
-
 ## Installation
 
 ### Windows installation

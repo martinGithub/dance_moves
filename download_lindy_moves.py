@@ -63,8 +63,7 @@ def download_and_cut(videoid,start,end,level,beatcount,move_name):
     #coul use http://loopthetube.com/#FB1cCoib7xQ&start=41.948&end=46.915
     movesUrlsDict[move_name]={'url':url,'level':level,'beatcount':beatcount}
     
-    
-    
+       
 
 #download_and_cut('HYcuxW5_ilg','00:00:25','00:00:31','level 1/8 counts','arm catch 8 step')
 #with open('moves.csv', 'rb') as csvfile:
