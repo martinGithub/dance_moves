@@ -87,7 +87,7 @@ with  open('listmoves.md', 'r') as f:
         t=url.split('&')
         beatcount=columns[2]
         level=columns[3]
-        videoid=t[0][t[0].find('?v=')+2:]
+        videoid=t[0][t[0].find('?v=')+3:]
         start=str(timedelta(seconds=int(t[1][9:])))
         end=str(timedelta(seconds=int(t[2][7:])))
         download_and_cut(videoid, start, end, level, beatcount, move_name)
