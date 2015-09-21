@@ -50,6 +50,7 @@ if system=='Windows':
     os.remove(os.path.join(tempDownloadsFolder,"7z920-x64.msi")) 
     print 'done'    
     os.rmdir(tempDownloadsFolder)
+    print 'INSTALLATION FINISHED :)'
     
 elif system=='Darwin':
     print 'installing pip'
@@ -68,24 +69,27 @@ elif system=='Darwin':
     # installing libav seem complex on mac :( as it requires brew that itelf requiers xcode so we use ffmpeg instead
     #subprocess.call('brew install libav',shell=True)
     
-    print 'downloading ffmpeg'
+    print 'installing ffmpeg'
     #urllib.urlretrieve ("http://evermeet.cx/ffmpeg/ffmpeg-2.8.7z","ffmpeg-2.8.7z")
     urllib.urlretrieve ("http://ffmpegmac.net/resources/SnowLeopard_Lion_Mountain_Lion_Mavericks_Yosemite_09.08.2015.zip","ffmpeg.zip")
-    print 'done'
     import zipfile
     fh = open('ffmpeg.zip', 'rb')
     z = zipfile.ZipFile(fh)
     z.extract('ffmpeg', '.')
     fh.close()   
     os.remove('ffmpeg.zip') 
-    
     subprocess.call('chmod +x ffmpeg',shell=True)
+    print 'done'
+    print 'INSTALLATION FINISHED :)'
+    
+    
     
     
     
 elif system=='Linux':
     subprocess.call('sudo pip install youtube-dl',shell=True)
     subprocess.call('sudo apt-get install libav-tools',shell=True)
+    print 'INSTALLATION FINISHED :)'
     #if one wants to use ffmpeg instead
     #sudo add-apt-repository ppa:mc3man/trusty-media
     #sudo apt-get update
