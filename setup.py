@@ -51,7 +51,7 @@ if system=='Windows':
     print 'done'    
     os.rmdir(tempDownloadsFolder)
     
-elif system=='Darwin':
+elif system=='Linux':
     print 'installing pip'
     # problem : installing brew requires xcode to be installed :(
     #subprocess.call('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"',shell=True)
@@ -59,6 +59,7 @@ elif system=='Darwin':
     #subprocess.call('sudo easy_install pip',shell=True)# seems like this does not work on some machines
     urllib.urlretrieve ("https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py","get-pip.py")
     subprocess.call('sudo python get-pip.py',shell=True)
+    os.remove('get-pip.py') 
     print 'done'  
     print 'installing youtube-dl'
     subprocess.call('sudo pip install youtube-dl',shell=True)
@@ -77,11 +78,12 @@ elif system=='Darwin':
     z.extract('ffmpeg', '.')
     fh.close()   
     os.remove('ffmpeg.zip') 
+    
     subprocess.call('chmod +x ffmpeg',shell=True)
     
     
     
-elif system=='Linux':
+elif system=='Linux2':
     subprocess.call('sudo pip install youtube-dl',shell=True)
     subprocess.call('sudo apt-get install libav-tools',shell=True)
     #if one wants to use ffmpeg instead
