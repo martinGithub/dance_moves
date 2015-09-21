@@ -106,12 +106,29 @@ We could use avconvert when executed on Mac OS (from OS X Lion) to avoid the ins
 <a id="gifs" class="anchor" href="#gifs" aria-hidden="true"><span class="octicon octicon-link"></span></a>GIFS</h2>
 
 
+<script type="text/javascript" src="swfobject.js"></script>    
+<div id="ytapiplayer">
+  You need Flash player 8+ and JavaScript enabled to view this video.
+</div>
+
+<script type="text/javascript">
+
+  var params = { allowScriptAccess: "always" };
+  var atts = { id: "myytplayer" };
+  swfobject.embedSWF("http://www.youtube.com/v/9XkYi-s5YWw?enablejsapi=1&playerapiid=ytplayer&version=3",
+                     "ytapiplayer", "425", "356", "8", null, null, params, atts);
+                     
+  function onYouTubePlayerReady(playerId) {
+  ytplayer = document.getElementById("myytplayer");
+  ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
+  }
+function onytplayerStateChange(newState) {
+   alert("Player's new state: " + newState);
+}
 
 
-
-      <iframe width="420" height="315"
-src="http://www.youtube.com/embed/9XkYi-s5YWw?start=101&end=107" frameborder=”0″ allowfullscreen>
-</iframe> 
+</script>
+ 
 
      
       </section>
