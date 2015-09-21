@@ -52,22 +52,21 @@ if system=='Windows':
     os.rmdir(tempDownloadsFolder)
     
 elif system=='Darwin':
-    
-    print 'installing youtube-dl'
-    subprocess.call('sudo pip install youtube-dl',shell=True)
-    print 'done'
-    #print 'installing pip'
+    print 'installing pip'
     # problem : installing brew requires xcode to be installed :(
     #subprocess.call('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"',shell=True)
     #subprocess.call('brew install python',shell=True)
-    #print 'done'
+    #subprocess.call('sudo easy_install pip',shell=True)# seems like this does not work on some machines
     urllib.urlretrieve ("https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py","get-pip.py")
     subprocess.call('sudo python get-pip.py',shell=True)
-     
-    #subprocess.call('sudo easy_install pip',shell=True)# seems like this does not work on some machines
-    # installing libav seem complex on mac :( so we use ffmpeg instead
+    print 'done'  
+    print 'installing youtube-dl'
+    subprocess.call('sudo pip install youtube-dl',shell=True)
+    print 'done'
+
+    # installing libav seem complex on mac :( as it requires brew that itelf requiers xcode so we use ffmpeg instead
     #subprocess.call('brew install libav',shell=True)
-        
+    
     print 'downloading ffmpeg',
     #urllib.urlretrieve ("http://evermeet.cx/ffmpeg/ffmpeg-2.8.7z","ffmpeg-2.8.7z")
     urllib.urlretrieve ("http://ffmpegmac.net/resources/SnowLeopard_Lion_Mountain_Lion_Mavericks_Yosemite_09.08.2015.zip","ffmpeg.zip")
