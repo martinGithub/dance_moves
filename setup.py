@@ -67,7 +67,7 @@ elif system=='Darwin':
     # installing libav seem complex on mac :( as it requires brew that itelf requiers xcode so we use ffmpeg instead
     #subprocess.call('brew install libav',shell=True)
     
-    print 'downloading ffmpeg',
+    print 'downloading ffmpeg'
     #urllib.urlretrieve ("http://evermeet.cx/ffmpeg/ffmpeg-2.8.7z","ffmpeg-2.8.7z")
     urllib.urlretrieve ("http://ffmpegmac.net/resources/SnowLeopard_Lion_Mountain_Lion_Mavericks_Yosemite_09.08.2015.zip","ffmpeg.zip")
     print 'done'
