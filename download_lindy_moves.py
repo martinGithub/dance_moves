@@ -19,7 +19,7 @@ if system=='Windows':
 elif system=='Linux':
     aviconv_executable='avconv'
 elif system=='Darwin':
-    aviconv_executable='ffmpeg'
+    aviconv_executable='./ffmpeg'
     
 else:
     print 'unreckognized OS'
