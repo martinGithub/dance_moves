@@ -105,30 +105,93 @@ We could use avconvert when executed on Mac OS (from OS X Lion) to avoid the ins
 <h2>
 <a id="gifs" class="anchor" href="#gifs" aria-hidden="true"><span class="octicon octicon-link"></span></a>GIFS</h2>
 
-
-<script type="text/javascript" src="javascripts/swfobject.js"></script>    
-<div id="ytapiplayer">
-  You need Flash player 8+ and JavaScript enabled to view this video.
-</div>
-
-<script type="text/javascript">
-
-  var params = { allowScriptAccess: "always" };
-  var atts = { id: "myytplayer" };
-  swfobject.embedSWF("http://www.youtube.com/v/9XkYi-s5YWw?enablejsapi=1&playerapiid=ytplayer&version=3",
-                     "ytapiplayer", "425", "356", "8", null, null, params, atts);
-                     
-  function onYouTubePlayerReady(playerId) {
-  ytplayer = document.getElementById("myytplayer");
-  ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
-  }
-function onytplayerStateChange(newState) {
-   alert("Player's new state: " + newState);
-}
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+<div id="player"></div>
 
 
+
+ <script>
+videoId='9XkYi-s5YWw'
 </script>
- 
+
+
+
+    <script>
+console.log(window.location.href)
+// find documentation here https://developers.google.com/youtube/iframe_api_reference
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: videoId,
+	  playerVars : {
+            'autoplay' : 0, 'controls': 1},
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+	var reached = false;
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+console.log('ready')
+
+	player.seekTo(10, 0);
+player.pauseVideo();
+	//player.setPlaybackRate(0.3);
+	var time = 20; 
+	
+	
+	var interval = setInterval(function(){
+		//console.log(player.getCurrentTime())
+	if(player.getCurrentTime() < time){reached= false;}
+	    if(player.getCurrentTime() >= time &&!reached) {
+		console.log('coucou')
+		//clearInterval(interval);
+		reached = true;
+		timeReached(event);
+	    }
+	},100);
+        //event.target.playVideo();
+
+      }
+
+      function onPlayerStateChange(event) {
+        if (event.data == 1) {
+         
+
+
+
+         
+        }
+      }
+	function timeReached(event){
+	console.log('time reached')
+	//player.pauseVideo();
+	event.target.seekTo(10, true);// you need to set true or it won't work ! 
+	console.log(player.getCurrentTime())
+	//player.playVideo();
+
+	}
+
+
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+
+
 
      
       </section>
