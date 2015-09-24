@@ -10,7 +10,7 @@ This project somehow complements the website http://www.lindysteps.com that does
 
 ##Existing moves
 
-You can consult the list of moves [here](./listmoves/lindy_moves.csv).
+You can consult the list of moves [here](../listmoves/lindy_moves.csv).
 You can add moves by editing this file if you are a collaborator.
 
 ## Installation
