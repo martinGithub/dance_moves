@@ -1,5 +1,5 @@
 # Lindy Hop Moves Videos Maker
-This project contains a python script that downloads videos from *youtube* and edit them automatically to create on your computer a short video file of about 5s for each Lindy Hop move listed [here](listmoves.md). You can transfer these video files to your smartphone and watch them whenever you forgot the details of a move.
+This project contains a python script that downloads videos from *youtube* and edit them automatically to create on your computer a short video file of about 5s for each Lindy Hop move listed [here](../listmoves/lindy_moves.csv). You can transfer these video files to your smartphone and watch them whenever you forgot the details of a move.
 
 This project somehow complements the website http://www.lindysteps.com that does not provide a way to download edited version of the video on a mobile.
 
@@ -10,7 +10,7 @@ This project somehow complements the website http://www.lindysteps.com that does
 
 ##Existing moves
 
-You can consult the list of moves [here](listmoves.md).
+You can consult the list of moves [here](./listmoves/lindy_moves.csv).
 You can add moves by editing this file if you are a collaborator.
 
 ## Installation
@@ -49,16 +49,6 @@ By default the original youtube videos and the edited videos will be created res
 Using OpenCV we could improve the quality of the videos by running some video stabilisation method, background substraction and contrast enhancement.
 We could also denoise the sound on some videos.
 We could use avconvert when executed on Mac OS (from OS X Lion) to avoid the installation of libav or ffmpeg.
-
-## GIFS
-
-
-![Image](http://cdn.yourepeat.com/media/gif/002/499/901/1c9742f5c51469acb193029dcdf6e58e.gif?raw=true)
-
-
-
-
-
 
 
 
