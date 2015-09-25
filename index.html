@@ -7,8 +7,11 @@
     <meta name="description" content="Lindy hop moves : a python script that downloads videos and edit them automatically to get a short video for each Lindy Hop dance move of about 5s">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/custom.css">
 
     <title>Lindy hop moves</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="./javascripts/jquery.csv-0.71.js"></script>
   </head>
 
   <body>
@@ -18,105 +21,115 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/martinGithub/lindy_hop_moves">View on GitHub</a>
 
-          <h1 id="project_title">Lindy hop moves</h1>
-          <h2 id="project_tagline">a python script that downloads videos and edit them automatically to get a short video for each Lindy Hop dance move of about 5s</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/martinGithub/lindy_hop_moves/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/martinGithub/lindy_hop_moves/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+          <h1 id="project_title">Lindy hop moves video player</h1>
+        
+          
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>
-<a id="lindy-hop-moves-videos-maker" class="anchor" href="#lindy-hop-moves-videos-maker" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lindy Hop Moves Videos Maker</h1>
 
-<p>This project contains a python script that downloads videos from <em>youtube</em> and edit them automatically to create on your computer a short video file of about 5s for each Lindy Hop move listed <a href="listmoves.md">here</a>. You can transfer these video files to your smartphone and watch them whenever you forgot the details of a move.</p>
-
-<p>This project somehow complements the website <a href="http://www.lindysteps.com">http://www.lindysteps.com</a> that does not provide a way to download edited version of the video on a mobile.</p>
-
-<h2>
-<a id="mobile-video-players" class="anchor" href="#mobile-video-players" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mobile Video Players</h2>
-
-<ul>
-<li>Using the application <em>AVPlayer</em> on android you can loop the video until you fully understand the move.</li>
-<li>Using the <em>VLC player</em> on android you can visualize a video in slow motion.</li>
-</ul>
-
-<h2>
-<a id="existing-moves" class="anchor" href="#existing-moves" aria-hidden="true"><span class="octicon octicon-link"></span></a>Existing moves</h2>
-
-<p>You can consult the list of moves <a href="listmoves.md">here</a>.
-You can add moves by editing this file if you are a collaborator.</p>
-
-<h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
-
-<h3>
-<a id="windows-installation" class="anchor" href="#windows-installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows installation</h3>
-
-<ul>
-<li>install python from <a href="https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64.msi">https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64.msi</a>.</li>
-<li>download the zip file of the project <a href="https://github.com/martinGithub/lindy_hop_moves/archive/master.zip">here</a> an decompress it </li>
-<li>double click on <em>setup.py</em>, this will install automatically the dependencies (<em>youtube-dl</em> and <em>libav</em>). </li>
-</ul>
-
-<h3>
-<a id="mac-os-installation" class="anchor" href="#mac-os-installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mac OS installation</h3>
-
-<ul>
-<li>install python from <a href="https://www.python.org/ftp/python/2.7.10/python-2.7.10-macosx10.6.pkg">https://www.python.org/ftp/python/2.7.10/python-2.7.10-macosx10.6.pkg</a> (note that recent version of Mac OS X should comes with Python 2.7 out of the box)</li>
-<li>download the zip file of the project <a href="https://github.com/martinGithub/lindy_hop_moves/archive/master.zip">here</a> an decompress it </li>
-<li>in the terminal, move in the decompressed folder using the <em>cd</em> command (for example <em>cd ~/Downloads/lindy_hop_moves-master</em> if that where it has been decompressed) and type <em>sudo python setup.py</em>, this will install automatically the dependencies (<em>youtube-dl</em> and <em>ffmpeg</em>)</li>
-<li>you can now select <em>PythonLauncher</em> as the default application to open python scripts  through the <em>finder Info window</em>
-</li>
-</ul>
-
-<h3>
-<a id="linux-ubuntu-installation" class="anchor" href="#linux-ubuntu-installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linux (Ubuntu) installation</h3>
-
-<ul>
-<li>download the zip file of the project <a href="https://github.com/martinGithub/lindy_hop_moves/archive/master.zip">here</a> an decompress it </li>
-<li>in the terminal, move in the decompressed folder and type <em>sudo python setup.py</em>, this will install automatically the dependencies (<em>youtube-dl</em> and <em>libav</em>)</li>
-</ul>
-
-<h2>
-<a id="execution" class="anchor" href="#execution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Execution</h2>
-
-<p>In order to run the script you can either </p>
-
-<ul>
-<li><p>double-click on <em>download_lindy_moves.py</em> in Windows and Mac OS (assuming you have setup PythonLauncher as the default application for python scripts in Mac OS) </p></li>
-<li><p>open a terminal on Mac OS or Linux, or the <a href="http://www.7tutorials.com/7-ways-launch-command-prompt-windows-7-windows">command prompt</a> in Windows, then move to the decompressed folder using the <em>cd</em> command and then call <em>python download_lindy_moves.py</em>. </p></li>
-</ul>
-
-<p>By default the original youtube videos and the edited videos will be created respectively in the subfolders <em>edited_videos</em> and <em>original_videos</em>. You can change that by editing <em>download_lindy_moves.py</em> or you can create local symbolic links with this names that link to folder located somewhere else in the system.</p>
-
-<h2>
-<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO</h2>
-
-<p>Using OpenCV we could improve the quality of the videos by running some video stabilisation method, background substraction and contrast enhancement.
-We could also denoise the sound on some videos.
-We could use avconvert when executed on Mac OS (from OS X Lion) to avoid the installation of libav or ffmpeg.</p>
-
-<h2>
-<a id="gifs" class="anchor" href="#gifs" aria-hidden="true"><span class="octicon octicon-link"></span></a>GIFS</h2>
 
 <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+<div id="content"> 
+<div id='left'>
+<h1 id='title'><h1>  
 <div id="player"></div>
 
+ <button type="button" class='speedButton' speed=1>normal speed</button> 
+ <button type="button" class='speedButton' speed=0.5 >slow x2</button> 
+ <button type="button" class='speedButton' speed=0.25 >slow x4</button> 
+<button type="button" class='BPM'  >click on 1</button>
+</div>
 
+  <div id='right'>
+<div id="listmoves"></div>
+</div>
+</div>
+
+
+<!--<table style="width:100%">
+  <tr>
+    <td><a class='croppedVideo' videoid='-eQaOZXJdkA' start=19 end=30 href='#'>airplane charleston</a></td>
+    <td>8 beats</td> 
+    <td>level 1</td>
+  </tr>
+  <tr>
+    <td><a   class='croppedVideo'  videoid='HYcuxW5_ilg' start=25 end=31  href='#'>arm catch 8 step </a></td>
+    <td>8 beats </td> 
+    <td>level 2</td>
+  </tr>
+</table>-->
 
  <script>
 videoId='9XkYi-s5YWw'
 </script>
+<!--
+<script src="https://raw.githubusercontent.com/martinGithub/lindy_hop_moves/master/listmoves.js"></script>
+ <script>
+$(function(){
+	
+      $("#listmoves").text(moves); 
+    });
+</script>-->
+
+ <script>
+function getSeconds(tt)
+{
+s=tt.split(":");
+sec=s[0]*3600+s[1]*60+s[2]*1;
+return sec
+}
+$.ajax({
+  dataType: "json",
+  url: 'https://api.github.com/repos/martinGithub/lindy_hop_moves/contents/lindy_moves.csv?ref=listmoves',
+    success: function(json) {       
+//$("#listmoves").text('worked?'); 
+var listmoves=$.csv.toArrays(atob(json.content));
+var text='<table style="width:100%">  <tr>'
+for	(index = 0; index < listmoves.length; index++) {
+	move=listmoves[index]
+	text+= '<tr>'
+    	text +=   "<td><a class='croppedVideo' videoid='"+move[0]+"' start="+move[1]+" end="+move[2]+" href='#'>"+move[5]+"</a></td>"
+   	text +=    "<td>"+move[3]+"</td> "
+	text +=    "<td>"+move[4]+"</td> "
+	text+='</tr>'
+  }
+text+=  "</tr></table> "
+	$("#listmoves").html(text); 
+        $('a.croppedVideo').on("click", function (e) {
+	e.preventDefault();
+
+	player.loadVideoById($(this).attr('videoid'));
+	maxtime=getSeconds($(this).attr('end'));
+	mintime=getSeconds($(this).attr('start'));
+	console.log($(this).attr('videoid')+ ' '+ mintime+ ' '+mintime)
+	$("#title").html($(this).text()); 
+	player.seekTo(mintime, 0);
+	idbeat=1
+	});
+
+console.log(json)
+    },
+    error: function(e) {
+       console.log(e.message);
+    }
+});
+
+
+</script>
+
+
+
 
 
 
     <script>
+	var maxtime = 20; 
+	var mintime = 10; 
+	var idbeat=1
 console.log(window.location.href)
 // find documentation here https://developers.google.com/youtube/iframe_api_reference
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -147,16 +160,18 @@ console.log(window.location.href)
       function onPlayerReady(event) {
 console.log('ready')
 
-	player.seekTo(10, 0);
+	player.seekTo(mintime, 0);
 player.pauseVideo();
 	//player.setPlaybackRate(0.3);
-	var time = 20; 
-	
+
 	
 	var interval = setInterval(function(){
-		//console.log(player.getCurrentTime())
-	if(player.getCurrentTime() < time){reached= false;}
-	    if(player.getCurrentTime() >= time &&!reached) {
+	console.log(player.getCurrentTime())
+	//console.log(mintime)
+	//console.log(maxtime)
+
+	if(player.getCurrentTime() < maxtime){reached= false;}
+	    if((player.getCurrentTime() >= maxtime || player.getCurrentTime() < mintime) &&!reached) {
 		console.log('coucou')
 		//clearInterval(interval);
 		reached = true;
@@ -179,9 +194,11 @@ player.pauseVideo();
 	function timeReached(event){
 	console.log('time reached')
 	//player.pauseVideo();
-	event.target.seekTo(10, true);// you need to set true or it won't work ! 
+	event.target.seekTo(mintime, true);// you need to set true or it won't work ! 
 	console.log(player.getCurrentTime())
 	//player.playVideo();
+	idbeat=1
+	$('button.BPM').text('click on beat '+idbeat)
 
 	}
 
@@ -189,6 +206,26 @@ player.pauseVideo();
       function stopVideo() {
         player.stopVideo();
       }
+
+
+
+    $(document).ready(function() {
+
+        $('button.speedButton').on("click", function (e) {
+	e.preventDefault();
+	player.setPlaybackRate($(this).attr('speed'));
+	});
+
+        $('button.BPM').on("click", function (e) {
+	e.preventDefault();
+	idbeat=idbeat+1
+	console.log(player.getCurrentTime())
+	$(this).text('click on beat '+idbeat)
+	});
+    });
+
+
+
     </script>
 
 
