@@ -5,7 +5,7 @@ from datetime import datetime,timedelta
 import os.path
 import platform
 system=platform.system()
-
+import urllib2
 import subprocess
 import csv
 download_folder = os.path.join('.','original_videos')
@@ -62,8 +62,15 @@ def download_and_cut(videoid,start,end,level,beatcount,move_name):
     url='https://www.yourepeat.com/watch/?v=%s&start_at=%d&end_at=%d'%(videoid ,s,e)
     #coul use http://loopthetube.com/#FB1cCoib7xQ&start=41.948&end=46.915
     movesUrlsDict[move_name]={'url':url,'level':level,'beatcount':beatcount}
-    
-       
+ 
+url = 'https://raw.githubusercontent.com/martinGithub/lindy_hop_moves/listmoves/lindy_moves.csv'
+csvfile = urllib2.urlopen(url)
+reader = csv.reader(csvfile, delimiter=str(','), quotechar=str('|'))
+for row in reader:
+    if not row==[]:
+        download_and_cut(*row)
+    else:
+        print 'empty row'       
 
 #download_and_cut('HYcuxW5_ilg','00:00:25','00:00:31','level 1/8 counts','arm catch 8 step')
 #with open('moves.csv', 'rb') as csvfile:
@@ -74,23 +81,23 @@ def download_and_cut(videoid,start,end,level,beatcount,move_name):
         #else:
             #print 'empty row'
             
-with  open('listmoves.md', 'r') as f:
+#with  open('listmoves.md', 'r') as f:
 
-    f.readline()#skipping the first to line that are the header of the table
-    f.readline()
-    lines = f.readlines()
-    for line in lines:
-        columns=line.split('|')
-        s=columns[1]
-        url=s[s.find("(")+1:s.find(")")]
-        move_name=s[s.find("[")+1:s.find("]")]
-        t=url.split('&')
-        beatcount=columns[2]
-        level=columns[3]
-        videoid=t[0][t[0].find('?v=')+3:]
-        start=str(timedelta(seconds=int(t[1][9:])))
-        end=str(timedelta(seconds=int(t[2][7:])))
-        download_and_cut(videoid, start, end, level, beatcount, move_name)
+    #f.readline()#skipping the first to line that are the header of the table
+    #f.readline()
+    #lines = f.readlines()
+    #for line in lines:
+        #columns=line.split('|')
+        #s=columns[1]
+        #url=s[s.find("(")+1:s.find(")")]
+        #move_name=s[s.find("[")+1:s.find("]")]
+        #t=url.split('&')
+        #beatcount=columns[2]
+        #level=columns[3]
+        #videoid=t[0][t[0].find('?v=')+3:]
+        #start=str(timedelta(seconds=int(t[1][9:])))
+        #end=str(timedelta(seconds=int(t[2][7:])))
+        #download_and_cut(videoid, start, end, level, beatcount, move_name)
         
         
 
