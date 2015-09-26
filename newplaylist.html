@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Lindy hop moves : a python script that downloads videos and edit them automatically to get a short video for each Lindy Hop dance move of about 5s">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/custom.css">
+
+    <title>Lindy hop moves</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="./javascripts/jquery.csv-0.71.js"></script>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/martinGithub/lindy_hop_moves">View on GitHub</a>
+
+          <h1 id="project_title">Lindy hop moves video player</h1>
+        
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" >
+<div class="inner">
+<h1> creating a new playlist </h1>
+<ul>
+<li>
+you need first to create a spreadsheet on google doc with the following colums (put the right colmuns names in the first row or it will not work):
+<img src="./images/google_spreadsheet_structure.png">
+</li>
+<li>
+then you need to publish the sheet (File -> Publish to the web -> Publish) for the data to be accessible from our website.
+</li>
+<li>
+then you change sharing permissions of the Google Spreadsheet that should be either “Public” or set to “Anyone with link can view” for tour websit to be able to fetch cells from the Google Spreadsheet without authentication.</p>
+</li>
+
+<li>
+then you get the id number of your spreadsheet from its url , for example if the url of your google sreadsheet it 
+https://docs.google.com/spreadsheets/d/lj1KJ34dfl8kj9gf6jh9k7hjg7kjh7 (this id does not exist it is just an example !)
+then the id number is lj1KJ34dfl8kj9gf6jh9k7hjg7kjh7
+</li>
+<li>
+finaly you can then access to the player with your custom playlist by replacing YOUR_GOOGLEDOC_SPEADSHEET_ID by the id number in this url 
+http://martingithub.github.io/lindy_hop_moves/?source=google_spreadsheet&id=YOUR_GOOGLEDOC_SPEADSHEET_ID
+</li>
+</ul>
+</div>
+
+    </section>
+    </div>
+
+
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Lindy hop moves maintained by <a href="https://github.com/martinGithub">martinGithub</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
