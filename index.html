@@ -29,19 +29,18 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      <section id="main_content" >
 
 
 <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
 <div id="content"> 
 <div id='left'>
-<h1 id='title'><h1>  
+<h3 id='title'><h3>  
 <div id="player"></div>
-
- <button type="button" class='speedButton' speed=1>normal speed</button> 
+ <button type="button"  class='speedButton' speed=1>normal speed</button> 
  <button type="button" class='speedButton' speed=0.5 >slow x2</button> 
  <button type="button" class='speedButton' speed=0.25 >slow x4</button> 
-<button type="button" class='BPM'  >click on 1</button>
+<!--<button type="button" class='BPM'  >click on 1</button>-->
 </div>
 
   <div id='right'>
@@ -63,9 +62,7 @@
   </tr>
 </table>-->
 
- <script>
-videoId='9XkYi-s5YWw'
-</script>
+
 <!--
 <script src="https://raw.githubusercontent.com/martinGithub/lindy_hop_moves/master/listmoves.js"></script>
  <script>
@@ -127,6 +124,9 @@ console.log(json)
 
 
     <script>
+
+	videoId='Oi1BcouEmio'//black video
+
 	var maxtime = 20; 
 	var mintime = 10; 
 	var idbeat=1
@@ -224,7 +224,10 @@ player.pauseVideo();
 	});
     });
 
-
+$(window).scroll(function(){
+    $("#left").css("margin-top",Math.max(-190,0-$(this).scrollTop()));
+     
+});
 
     </script>
 
