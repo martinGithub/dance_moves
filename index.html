@@ -42,200 +42,134 @@
  <button type="button" class='speedButton' speed=0.25 >slow x4</button> 
 <!--<button type="button" class='BPM'  >click on 1</button>-->
 </div>
-
-  <div id='right'>
+<div id='right'>
 <div id="listmoves"></div>
 </div>
 </div>
 
 
-<!--<table style="width:100%">
-  <tr>
-    <td><a class='croppedVideo' videoid='-eQaOZXJdkA' start=19 end=30 href='#'>airplane charleston</a></td>
-    <td>8 beats</td> 
-    <td>level 1</td>
-  </tr>
-  <tr>
-    <td><a   class='croppedVideo'  videoid='HYcuxW5_ilg' start=25 end=31  href='#'>arm catch 8 step </a></td>
-    <td>8 beats </td> 
-    <td>level 2</td>
-  </tr>
-</table>-->
-
-
-<!--
-<script src="https://raw.githubusercontent.com/martinGithub/lindy_hop_moves/master/listmoves.js"></script>
- <script>
-$(function(){
-	
-      $("#listmoves").text(moves); 
-    });
-</script>-->
 
  <script>
-function getSeconds(tt)
-{
-s=tt.split(":");
-sec=s[0]*3600+s[1]*60+s[2]*1;
-return sec
-}
-$.ajax({
-  dataType: "json",
-  url: 'https://api.github.com/repos/martinGithub/lindy_hop_moves/contents/lindy_moves.csv?ref=listmoves',
-    success: function(json) {       
-//$("#listmoves").text('worked?'); 
-var listmoves=$.csv.toArrays(atob(json.content));
-var text='<table style="width:100%">  <tr>'
-for	(index = 0; index < listmoves.length; index++) {
-	move=listmoves[index]
-	text+= '<tr>'
-    	text +=   "<td><a class='croppedVideo' videoid='"+move[0]+"' start="+move[1]+" end="+move[2]+" href='#'>"+move[5]+"</a></td>"
-   	text +=    "<td>"+move[3]+"</td> "
-	text +=    "<td>"+move[4]+"</td> "
-	text+='</tr>'
-  }
-text+=  "</tr></table> "
-	$("#listmoves").html(text); 
-        $('a.croppedVideo').on("click", function (e) {
-	e.preventDefault();
-
-	player.loadVideoById($(this).attr('videoid'));
-	maxtime=getSeconds($(this).attr('end'));
-	mintime=getSeconds($(this).attr('start'));
-	console.log($(this).attr('videoid')+ ' '+ mintime+ ' '+mintime)
-	$("#title").html($(this).text()); 
-	player.seekTo(mintime, 0);
-	idbeat=1
+	function getSeconds(tt)
+	{
+	s=tt.split(":");
+	sec=s[0]*3600+s[1]*60+s[2]*1;
+	return sec
+	}
+	$.ajax({
+	  dataType: "json",
+	  url: 'https://api.github.com/repos/martinGithub/lindy_hop_moves/contents/lindy_moves.csv?ref=listmoves',
+		success: function(json) {       
+			//$("#listmoves").text('worked?'); 
+			var listmoves=$.csv.toArrays(atob(json.content));
+			var text='<table style="width:100%">  <tr>'
+			for	(index = 0; index < listmoves.length; index++) {
+				move=listmoves[index]
+				text+= '<tr>'
+			    	text +=   "<td><a class='croppedVideo' videoid='"+move[0]
+				text+="' start="+move[1]+" end="+move[2]+" href='#'>"+move[5]+"</a></td>"
+			   	text +=    "<td>"+move[3]+"</td> "
+				text +=    "<td>"+move[4]+"</td> "
+				text+='</tr>'
+			  }
+			text+=  "</tr></table> "
+			$("#listmoves").html(text); 
+		
+			$('a.croppedVideo').on("click", function (e) {
+				e.preventDefault();
+				player.loadVideoById($(this).attr('videoid'));
+				maxtime=getSeconds($(this).attr('end'));
+				mintime=getSeconds($(this).attr('start'));
+				console.log($(this).attr('videoid')+ ' '+ mintime+ ' '+mintime)
+				$("#title").html($(this).text()); 
+				player.seekTo(mintime, 0);
+				idbeat=1
+			});},
+    		error: function(e) {
+       			console.log(e.message);}
 	});
 
-console.log(json)
-    },
-    error: function(e) {
-       console.log(e.message);
-    }
-});
-
-
-</script>
-
-
-
-
-
-
-    <script>
 
 	videoId='Oi1BcouEmio'//black video
 
 	var maxtime = 20; 
 	var mintime = 10; 
 	var idbeat=1
-console.log(window.location.href)
-// find documentation here https://developers.google.com/youtube/iframe_api_reference
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	// find documentation here https://developers.google.com/youtube/iframe_api_reference
+      	// 2. This code loads the IFrame Player API code asynchronously.
+      	var tag = document.createElement('script');
 
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
+      	tag.src = "https://www.youtube.com/iframe_api";
+      	var firstScriptTag = document.getElementsByTagName('script')[0];
+      	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      	// 3. This function creates an <iframe> (and YouTube player)
+      	//    after the API code downloads.
+      	var player;
+      	function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: videoId,
-	  playerVars : {
-            'autoplay' : 0, 'controls': 1},
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
+		  height: '390',
+		  width: '640',
+		  videoId: videoId,
+		  playerVars : {
+		    'autoplay' : 0, 'controls': 1},
+		  events: {
+		    'onReady': onPlayerReady,
+		    'onStateChange': onPlayerStateChange
+		  }});}
 	var reached = false;
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-console.log('ready')
-
-	player.seekTo(mintime, 0);
-player.pauseVideo();
-	//player.setPlaybackRate(0.3);
+      	// 4. The API will call this function when the video player is ready.
+      	function onPlayerReady(event) {
+		player.seekTo(mintime, 0);
+		player.pauseVideo();
+		//player.setPlaybackRate(0.3);
 
 	
 	var interval = setInterval(function(){
-	console.log(player.getCurrentTime())
-	//console.log(mintime)
-	//console.log(maxtime)
+		//console.log(player.getCurrentTime())
+		//console.log(mintime)
+		//console.log(maxtime)
 
-	if(player.getCurrentTime() < maxtime){reached= false;}
-	    if((player.getCurrentTime() >= maxtime || player.getCurrentTime() < mintime) &&!reached) {
-		console.log('coucou')
-		//clearInterval(interval);
-		reached = true;
-		timeReached(event);
-	    }
-	},100);
-        //event.target.playVideo();
+		if(player.getCurrentTime() < maxtime){reached= false;}
+		if((player.getCurrentTime() >= maxtime || player.getCurrentTime() < mintime) &&!reached) {
+			console.log('coucou')
+			//clearInterval(interval);
+			reached = true;
+			timeReached(event);
+		    }},100);  }
 
-      }
+     	function onPlayerStateChange(event) {
+        	if (event.data == 1) {}}
 
-      function onPlayerStateChange(event) {
-        if (event.data == 1) {
-         
-
+	function timeReached(event){		
+		event.target.seekTo(mintime, true);// you need to set true or it won't work ! 
+		console.log(player.getCurrentTime())}
 
 
-         
-        }
-      }
-	function timeReached(event){
-	console.log('time reached')
-	//player.pauseVideo();
-	event.target.seekTo(mintime, true);// you need to set true or it won't work ! 
-	console.log(player.getCurrentTime())
-	//player.playVideo();
-	idbeat=1
-	$('button.BPM').text('click on beat '+idbeat)
-
-	}
-
-
-      function stopVideo() {
-        player.stopVideo();
-      }
+	function stopVideo() {
+		player.stopVideo();
+	      }
 
 
 
-    $(document).ready(function() {
+	$(document).ready(function() {
+		$('button.speedButton').on("click", function (e) {
+			e.preventDefault();
+			player.setPlaybackRate($(this).attr('speed'));});
+		});
 
-        $('button.speedButton').on("click", function (e) {
-	e.preventDefault();
-	player.setPlaybackRate($(this).attr('speed'));
-	});
+	$(window).scroll(function(){
+    		$("#left").css("margin-top",Math.max(-190,0-$(this).scrollTop()));});
 
-        $('button.BPM').on("click", function (e) {
-	e.preventDefault();
-	idbeat=idbeat+1
-	console.log(player.getCurrentTime())
-	$(this).text('click on beat '+idbeat)
-	});
-    });
-
-$(window).scroll(function(){
-    $("#left").css("margin-top",Math.max(-190,0-$(this).scrollTop()));
-     
-});
-
-    </script>
+</script>
 
 
 
-     
-      </section>
+    </section>
     </div>
+
+
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
