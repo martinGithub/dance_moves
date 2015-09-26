@@ -33,24 +33,28 @@
 <div class="inner">
 <h1> creating a new playlist </h1>
 <ul>
+
 <li>
 you need first to create a spreadsheet on google doc with the following colums (put the right columns names in the first row or it will not work):
 <img src="./images/google_spreadsheet_structure.png">
 </li>
+
 <li>
 then you need to publish the sheet (File -> Publish to the web -> Publish) for the data to be accessible from our website.
 </li>
+
 <li>
-then you change sharing permissions of the Google Spreadsheet that should be either “Public” or set to “Anyone with link can view” for tour websit to be able to fetch cells from the Google Spreadsheet without authentication.</p>
+then you change sharing permissions of the Google Spreadsheet that should be either “Public” or set to “Anyone with link can view” for our website to be able to fetch cells from the Google Spreadsheet without authentication.</p>
 </li>
 
 <li>
-then you get the id number of your spreadsheet from its url , for example if the url of your google sreadsheet it 
-https://docs.google.com/spreadsheets/d/lj1KJ34dfl8kj9gf6jh9k7hjg7kjh7 (this id does not exist it is just an example !)
+then you get the id number of your spreadsheet from its url , for example if the url of your google sreadsheet is 
+https://docs.google.com/spreadsheets/d/lj1KJ34dfl8kj9gf6jh9k7hjg7kjh7 (do not try this url, this  speadsheet does not exist it is juste an example !)
 then the id number is lj1KJ34dfl8kj9gf6jh9k7hjg7kjh7
 </li>
+
 <li>
-finaly you can then access to the player with your custom playlist by replacing YOUR_GOOGLEDOC_SPEADSHEET_ID by the id number in this url 
+finaly you can access to the player with your custom playlist by replacing YOUR_GOOGLEDOC_SPEADSHEET_ID by the id number in this url 
 http://martingithub.github.io/lindy_hop_moves/?source=google_spreadsheet&id=YOUR_GOOGLEDOC_SPEADSHEET_ID
 </li>
 </ul>
