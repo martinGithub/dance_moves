@@ -11,7 +11,11 @@ This project somehow complements the website http://www.lindysteps.com that does
 ##Existing moves
 
 You can consult the list of moves [here](http://martingithub.github.io/lindy_hop_moves/).
-You can add moves by editing this file if you are a collaborator.
+
+If you want to download other moves you can create you own list of moves 
+* using a google doc spreadsheet (as explained [here](http://martingithub.github.io/lindy_hop_moves/newplaylist.html)). The advantage is that you can then see the vidoes in the player.
+* locally in a spreadsheet in the  cvs format (comma separated values) that needs to be structured like exampleMoves.cvs in the project folder once your decompressed the zip file of the project.
+
 
 ## Installation
 
