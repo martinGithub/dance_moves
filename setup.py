@@ -1,4 +1,4 @@
-import pip
+
 import urllib
 import os
 import subprocess
@@ -23,7 +23,7 @@ if system=='Windows':
 
     tempDownloadsFolder=os.path.join(targetFolder,'temporary_downloads')
     os.mkdir(tempDownloadsFolder)
-    
+    import pip
     
     pip.main(['install', 'youtube-dl'])
     
