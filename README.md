@@ -5,7 +5,7 @@ This project somehow complements the website http://www.lindysteps.com that does
 
 ## Mobile Video Players 
 
-* Using the application *AVPlayer* on android you can loop the video until you fully understand the move.
+* Using the application [AVPlayer](https://play.google.com/store/apps/details?id=com.vnd.mplayer.neon.noad&hl=en) on android you can loop the video until you fully understand the move.
 * Using the *VLC player* on android you can visualize a video in slow motion.
 
 ##Existing moves
