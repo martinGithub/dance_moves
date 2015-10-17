@@ -1,5 +1,5 @@
-# lindy_hop_moves
-a python script that downloads videos and edit them automatically to get a short video for each Lindy Hop dance move of about 5s
+# dance moves
+a python script that downloads videos and edit them automatically to get a short video for each dance move of about 5s
 
 This is the branch for the github pages website.
 You can download and open it locally on your machine, but if you want the custom video player to work

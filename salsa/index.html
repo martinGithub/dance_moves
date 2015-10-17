@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="dance moves : a python script that downloads videos and edit them automatically to get a short video for each Dance move of about 5s">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/custom.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/custom.css">
 
     <title>Dance moves</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="./javascripts/jquery.csv-0.71.js"></script>
-<script src="./javascripts/player.js"></script>
+<script src="../javascripts/jquery.csv-0.71.js"></script>
+<script src="../javascripts/player.js"></script>
   </head>
 
   <body>
@@ -23,7 +23,8 @@
           <a id="forkme_banner" href="https://github.com/martinGithub/dance_moves">View on GitHub</a>
 
           <h1 id="project_title">Dance moves video player</h1>
-   
+           <a class='dancename' href='../lindyhop/' > Lindy Hop </a>
+	<a class='dancename' id='selecteddance' href='../salsa/'> Salsa </a>
           
         </header>
     </div>
@@ -31,17 +32,11 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" >
-<div id="playerwithplaylist" 
-<center>
-<ul id='liststyles'>
-       <li> <a href='./lindyhop/' > Lindy Hop </a></li>
-	<li><a  href='./salsa/'> Salsa </a></li>
-	<li><a  href='./newplaylist.html'> create your own list of moves </a></li>
-<li><a   href='https://github.com/martinGithub/dance_moves'> download videos </a></li>
 
-</ul>
-</center>
-</div> 
+<div id="playerwithplaylist" 
+spreadsheet="https://github.com/martinGithub/lindy_hop_moves/blob/listmoves/salsa_moves.csv"
+rawspreadsheet='https://api.github.com/repos/martinGithub/lindy_hop_moves/contents/salsa_moves.csv'
+/> 
 
 </section>
     </div>
@@ -52,7 +47,7 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright">Dance moves maintained by <a href="https://github.com/martinGithub">martinGithub</a>.
-        Published with <a href="https://pages.github.com">GitHub Pages</a>.
+        Published with <a href="https://pages.github.com">GitHub Pages</a>. 
         </p>
       </footer>
     </div>
