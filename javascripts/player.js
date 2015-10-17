@@ -144,13 +144,32 @@ spreadsheet_link=$('#playerwithplaylist').attr('spreadsheet');
 			columns=listmoves[0]
 	var associativeArray = {};
 for	(i = 0; i < columns.length; i++) {
-associativeArray[columns[i]]=i
+associativeArray[columns[i]]=i;
 }
+
+var column_to_ignore={};
+for	(i = 0; i < columns.length; i++) {
+column_to_ignore[columns[i]]=0;
+}
+column_to_ignore['start']=1;
+column_to_ignore['end']=1;
+column_to_ignore['youtubeid']=1;
+column_to_ignore['name']=1;
+column_to_ignore['dance']=1;
+column_to_ignore['comment']=1;
 			for	(index = 1; index < listmoves.length; index++) {
 				move=listmoves[index]
 				text+= '<tr>'
 			    	text +=   "<td><a class='croppedVideo' videoid='"+move[associativeArray['youtubeid']]
-				text+="' start="+move[associativeArray['start']]+" end="+move[associativeArray['end']]+" href='#'>"+move[associativeArray['name']]+"</a>"
+				text+="' start="+move[associativeArray['start']]+" end="+move[associativeArray['end']]+" href='#'>"+move[associativeArray['name']]+
+
+"</a></td>";
+for	(i = 0; i < columns.length; i++) {
+if (column_to_ignore[columns[i]]==0){
+text+='<td>'+move[i]+'</td>'
+}
+}
+
 				text+='</tr>'
 			  }
 			text+=  "</tr></table> "
