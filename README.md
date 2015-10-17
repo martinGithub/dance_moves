@@ -11,7 +11,6 @@ This project contains a python script that downloads videos from *youtube* and e
 
 ##Existing moves
 
-<<<<<<< HEAD
 You can consult the list of moves [here](http://martingithub.github.io/dance_moves/). 
 
 If you want to download other moves you can create you own list of moves 
