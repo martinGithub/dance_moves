@@ -143,7 +143,7 @@ spreadsheet_link=$('#playerwithplaylist').attr('spreadsheet');
 			var text='<table style="width:100%">  <tr>'
 			columns=listmoves[0]
 	var associativeArray = {};
-for	(i = 1; i < columns.length; i++) {
+for	(i = 0; i < columns.length; i++) {
 associativeArray[columns[i]]=i
 }
 			for	(index = 1; index < listmoves.length; index++) {
