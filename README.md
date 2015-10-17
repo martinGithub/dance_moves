@@ -1,3 +1,4 @@
+
 # Dance Moves Videos Maker
 This project contains a python script that downloads videos from *youtube* and edit them automatically to create on your computer a short video file of about 5s for each Dance move listed [here](http://martingithub.github.io/dance_moves/) or in your own playlist written in google doc spreadsheet (see here [here](http://martingithub.github.io/dance_moves/newplaylist.html)). You can transfer these video files to your smartphone and watch them whenever you forgot the details of a move.
 
@@ -5,13 +6,17 @@ This project contains a python script that downloads videos from *youtube* and e
 
 ## Mobile Video Players 
 
-* Using the application *AVPlayer* on android you can loop the video until you fully understand the move.
+* Using the application [AVPlayer](https://play.google.com/store/apps/details?id=com.vnd.mplayer.neon.noad&hl=en) on android you can loop the video until you fully understand the move.
 * Using the *VLC player* on android you can visualize a video in slow motion.
 
 ##Existing moves
 
-You can consult the list of moves [here](http://martingithub.github.io/dance_moves/). You can create your own list of moves 
-in a google doc spreadsheet as explained here [here](http://martingithub.github.io/dance_moves/newplaylist.html).
+<<<<<<< HEAD
+You can consult the list of moves [here](http://martingithub.github.io/dance_moves/). 
+
+If you want to download other moves you can create you own list of moves 
+* using a google doc spreadsheet (as explained [here](http://martingithub.github.io/dance_moves/newplaylist.html)). The advantage is that you can then see the videos directly in the player.
+* locally in a spreadsheet in the  cvs format (comma separated values) that needs to be structured like exampleMoves.cvs in the project folder once your decompressed the zip file of the project.
 
 ## Installation
 
