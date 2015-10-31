@@ -1,7 +1,4 @@
 
-
-
-
 	function getSeconds(tt)
 	{
 	s=tt.split(":");
@@ -100,19 +97,46 @@ $.ajax({
 	  url: 'https://spreadsheets.google.com/feeds/list/'+$.urlParam('id')+'/default/public/values?alt=json',
 		success: function(json) {    
 			listmoves=json.feed.entry   
-			var text='<table style="width:100%">  <tr>'
-			
-			
+			var text='<table style="width:100%" class="sortable">  '
+			var columns=[]
+
+			for (k in listmoves[0]){
+if (k.substring(0, 4)==='gsx$'){
+					columns.push(k.substring(4))
+console.log(k.substring(4))}
+				}
+			var column_to_ignore={};
+			for	(i = 0; i < columns.length; i++) {
+			column_to_ignore[columns[i]]=0;
+			}
+			column_to_ignore['start']=1;
+			column_to_ignore['end']=1;
+			column_to_ignore['youtubeid']=1;
+			column_to_ignore['name']=1;
+			column_to_ignore['dance']=1;
+			column_to_ignore['comments']=1;
+text+= '<tr><th>name</th>'
+
+	for	(i = 0; i < columns.length; i++) {
+					if (column_to_ignore[columns[i]]==0){
+					text+='<th>'+columns[i]+'</th>'
+					}
+					}
+text+='</tr>'
 			for	(index = 0; index < listmoves.length; index++) {
 				move=listmoves[index]
 				text+= '<tr>'
 			    	text +=   "<td><a class='croppedVideo' videoid='"+move.gsx$youtubeid.$t
 				text+="' start="+move.gsx$start.$t+" end="+move.gsx$end.$t+" href='#'>"+move.gsx$name.$t+"</a></td>"
-			   	text +=    "<td>"+move.gsx$level.$t+"</td> "
-				text +=    "<td>"+move.gsx$beatcount.$t+"</td> "
+				for	(i = 0; i < columns.length; i++) {
+					if (column_to_ignore[columns[i]]==0){
+					text+='<td>'+move['gsx$'+columns[i]].$t+'</td>'
+					}
+					}
+			   	
 				text+='</tr>'
 			  }
-			text+=  "</tr></table> "
+			text+=  "</table> "
 			$("#listmoves").html(text); 
 		
 			$('a.croppedVideo').on("click", function (e) {
@@ -140,7 +164,7 @@ spreadsheet_link=$('#playerwithplaylist').attr('spreadsheet');
 		success: function(json) {       
 			//$("#listmoves").text('worked?'); 
 			var listmoves=$.csv.toArrays(atob(json.content));
-			var text='<table style="width:100%">  <tr>'
+			var text='<table style="width:100%" class="sortable">  <tr>'
 			columns=listmoves[0]
 	var associativeArray = {};
 for	(i = 0; i < columns.length; i++) {
@@ -156,7 +180,17 @@ column_to_ignore['end']=1;
 column_to_ignore['youtubeid']=1;
 column_to_ignore['name']=1;
 column_to_ignore['dance']=1;
-column_to_ignore['comment']=1;
+column_to_ignore['comments']=1;
+
+text+= '<tr><th>name</th>'
+
+	for	(i = 0; i < columns.length; i++) {
+					if (column_to_ignore[columns[i]]==0){
+					text+='<th>'+columns[i]+'</th>'
+					}
+					}
+text+='</tr>'
+
 			for	(index = 1; index < listmoves.length; index++) {
 				move=listmoves[index]
 				text+= '<tr>'
