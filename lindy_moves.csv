@@ -1,55 +1,62 @@
-youtubeid,start,end,level,beatcount,name
-HYcuxW5_ilg,00:00:25,00:00:31,level 1,8 counts,arm catch 8 step
-HYcuxW5_ilg,00:00:32,00:00:38,level 1,10 counts,arm catch double turn
-HYcuxW5_ilg,00:01:03,00:01:12,level 1,8 counts,arm catch double turn to texas tommy 
-JwkFqwdFbNI,00:00:08,00:00:14,level 1,8 counts,arm hook
-h9s05OCKfFs,00:00:01,00:00:06,level 1,6 counts,around the back aerial
-anNXA6YZ3Ug,00:01:17,00:01:23,level 1,8 counts,around the world tandem charleston
-n0Me9s2qPEU,00:02:11,00:02:18,level 1,8 counts,candle stick aka ace in the hole aerial
-mLkkUDXE65Y,00:00:21,00:00:26,level 1,6 counts,barrel roll
-CF0KIsQR6A4,00:02:25,00:02:30,level 1,8 counts,lindy circle 
-pnWF9Lb7QaU,00:01:27,00:01:34,level 1,8 counts,lindy circle from open  
-YSnlHV_GCA0,00:01:00,00:01:04,level 1,8 counts,swing out from closed
-YSnlHV_GCA0,00:01:07,00:01:11,level 1,8 counts,swing out from open
-YSnlHV_GCA0,00:01:24,00:01:29,level 1,8 counts,texas tommy 
-U9PJO-Keu-M,00:01:04,00:01:11,level 1,8 counts,texas tommy2
-GzyQldsVDb0,00:00:15,00:00:21,level 1,8 counts,texas tommy from closed
-9XkYi-s5YWw,00:01:41,00:01:47,level 1,8 counts,inside turn swingout from open 
-TlUwWjbyeN0,00:00:29,00:00:33,level 1,8 counts,inside turn swingout fromclosed 
-rfUdoXikhMc,00:00:17,00:00:21,level 1,8 counts,the nothing
-rbxqTcKj2U8,00:00:21,00:00:27,level 1,8 counts,she goes
-rbxqTcKj2U8,00:00:33,00:00:39,level 1,8 counts,treading water 
-CF0KIsQR6A4,00:01:39,00:01:44,level 1,8 counts,he goes
-uDARWpHsF-Y,00:02:30,00:02:34,level 1,6 counts,tuck turn 
-KJGrzuTPj2o,00:01:32,00:01:37,level 1,6 counts,sugar push 
-dPjS6QVqltk,00:01:47,00:02:00,level 1,8 counts,kick through
-uDARWpHsF-Y,00:01:57,00:02:01,level 1,6 counts,under arm turn
-EHubFEiS4tk,00:05:05,00:05:10,level 1,6 counts,send out
-bv_Xsyy3uAY,00:00:58,00:01:04,level 1,6 counts,side pass
-91FZSR9wQKk,00:00:55,00:01:01,level 1,6 counts,she goes he goes
-CF0KIsQR6A4,00:01:49,00:01:54,level 1,8 counts,promenade
-CF0KIsQR6A4,00:01:56,00:02:01,level 1,8 counts,reverse promenade
-USXmK5QXwCc,00:02:19,00:02:26,level 1,6 counts,cudle a.k.a wrap-in wrap-out
-cjQIwvnfI3Q,00:02:21,00:02:29,level 1,6 counts,sweetheart
-USXmK5QXwCc,00:00:56,00:01:00,level 1,6 counts,belt slide a.k.a waist wrap
-yR-H2MKsOTM,00:02:28,00:02:36,level 1,8 counts,lindy hop basket
-hlkp-XMeQOM,00:01:05,00:01:22,level 1,8 counts,tandem charleston
-jU0NWSu2x0o,00:00:28,00:00:37,level 1,8 counts,tandem charleston2
-jU0NWSu2x0o,00:00:35,00:00:46,level 1,8 counts,tandem - windshield wiper
-jU0NWSu2x0o,00:00:49,00:00:57,level 1,8 counts,tandem - follower turn
-jU0NWSu2x0o,00:00:59,00:01:07,level 1,8 counts,tandem - push away exit
--eQaOZXJdkA,00:00:19,00:00:30,level 1,8 counts,airplane charleston 
-5MEfGPNf3nE,00:00:33,00:00:43,level 1,8 counts,s-turn into tandem charleston
-0nbTtgY-aQ8,00:00:31,00:00:41,level 1,8 counts,scoots
-HYcuxW5_ilg,00:00:31,00:00:41,level 1,8 counts,scoots
-Dt4DYHQ-yYE,00:00:51,00:01:00,level 1,8 counts,twist around
-ZHdXSX0pbp4,00:00:21,00:00:29,level 1,8 counts,twist
-aoMux5a-32c,00:00:21,00:00:34,level 1,8 counts,traveling charleston
-mLkkUDXE65Y,00:02:20,00:02:26,level 2,8 counts,slide drag dig
-gnfTt8eqHgQ,00:00:34,00:00:47,level 2,8 counts,tandem - Side by Side Skates
-Hk3ICwPsgbU,00:00:48,00:00:54,level 2,8 counts,scissor kicks
-XsV7uIbozNA,00:01:14,00:01:19,level 2,8 counts,peel away
-YIiYOJWo87o,00:00:07,00:00:14,level 1,6 counts,pass by
-WWBWpZQ8ixs,00:02:32,00:02:39,level 1,8 counts,mini dip
-mLkkUDXE65Y,00:01:53,00:02:00,level 1,8 counts,jump out
-QRb9mO9DTY0,00:00:26,00:00:30,level 1,8 counts,johnnys drop
+name,youtubeid,start,end,level,beatcount,x,teachers,comments
+arm catch 8 beat ,HYcuxW5_ilg,00:00:25,00:00:31,level 1,8 counts,,teachers,no coment yet
+arm catch double turn,HYcuxW5_ilg,00:00:32,00:00:38,level 1,10 counts,,Peter Strom and Liz http://www.uptownswing.net,no coment yet
+arm catch double turn to texas tommy,HYcuxW5_ilg,00:01:03,00:01:12,level 1,8 counts,,Peter Strom and Liz http://www.uptownswing.net,no coment yet
+arm hook,JwkFqwdFbNI,00:00:08,00:00:14,level 1,8 counts,,Ali Taghavi and Katja Uckermann http://www.SwingStep.com and www.aliandkatja.com,no coment yet
+around the back aerial,h9s05OCKfFs,00:00:01,00:00:06,level 1,6 counts,,Christine and Walter from http://www.swingandthecity.com,no coment yet
+around the world tandem charleston,anNXA6YZ3Ug,00:01:17,00:01:23,level 1,8 counts,,Patrick Szmidt & Natasha Ouimet,no coment yet
+candle stick aka ace in the hole aerial,n0Me9s2qPEU,00:02:11,00:02:18,level 1,8 counts,,Idalia Ramos and Gilles Bouvier,no coment yet
+barrel roll,mLkkUDXE65Y,00:00:21,00:00:26,level 1,6 counts,,Jesse Hanus and Mike Thibault,no coment yet
+lindy circle,CF0KIsQR6A4,00:02:25,00:02:30,level 1,8 counts,,Peter Strom and Stacia Martin http://www.uptownswing.net,no coment yet
+lindy circle from open,pnWF9Lb7QaU,00:01:27,00:01:34,level 1,8 counts,,Jean Ma and Bromley Palamountain http://www.920special.com http://www.jeanandbromley.com/,no coment yet
+swing out from closed,YSnlHV_GCA0,00:01:00,00:01:04,level 1,8 counts,,Eric & Lucy,no coment yet
+swing out from open,YSnlHV_GCA0,00:01:07,00:01:11,level 1,8 counts,,Eric & Lucy,no coment yet
+texas tommy,YSnlHV_GCA0,00:01:24,00:01:29,level 1,8 counts,,Eric & Lucy,no coment yet
+texas tommy2,U9PJO-Keu-M,00:01:04,00:01:11,level 1,8 counts,,Jean Ma and Bromley Palamountain http://www.920special.com http://www.jeanandbromley.com/,no coment yet
+texas tommy from closed,GzyQldsVDb0,00:00:15,00:00:21,level 1,8 counts,,Robert and Nicola Royston,no coment yet
+inside turn swingout from open,9XkYi-s5YWw,00:01:41,00:01:47,level 1,8 counts,,Kenny Nelson and Jesse Hanus http://www.madverve.com/ http://www.jessehanus.com,no coment yet
+inside turn swingout fromclosed,TlUwWjbyeN0,00:00:29,00:00:33,level 1,8 counts,,,no coment yet
+the nothing,rfUdoXikhMc,00:00:17,00:00:21,level 1,8 counts,,Peter Strom and Stacia Martin http://www.uptownswing.net,no coment yet
+she goes,rbxqTcKj2U8,00:00:21,00:00:27,level 1,8 counts,,Lucy Falkner and Léo newman ,no coment yet
+treading water,rbxqTcKj2U8,00:00:33,00:00:39,level 1,8 counts,,Lucy Falkner and Léo newman ,no coment yet
+he goes,CF0KIsQR6A4,00:01:39,00:01:44,level 1,8 counts,,Peter Strom and Stacia Martin http://www.uptownswing.net,no coment yet
+tuck turn,uDARWpHsF-Y,00:02:30,00:02:34,level 1,6 counts,,Peter Strom and Stacia Martin http://www.uptownswing.net,no coment yet
+sugar push,KJGrzuTPj2o,00:01:32,00:01:37,level 1,6 counts,,Robert and Nicola Royston,no coment yet
+kick through,dPjS6QVqltk,00:01:47,00:02:00,level 1,8 counts,,Crista Seipp and Bobby White,no coment yet
+under arm turn,uDARWpHsF-Y,00:01:57,00:02:01,level 1,6 counts,,Peter Strom and Stacia Martin http://www.uptownswing.net,no coment yet
+send out,EHubFEiS4tk,00:05:05,00:05:10,level 1,6 counts,,Charlotte Skajaa and Audun Kveberg ,no coment yet
+side pass,bv_Xsyy3uAY,00:00:58,00:01:04,level 1,6 counts,,Ann Mony and Kirk Tarou,no coment yet
+she goes he goes,91FZSR9wQKk,00:00:55,00:01:01,level 1,6 counts,,Ann Mony and Manu Smith,no coment yet
+promenade,CF0KIsQR6A4,00:01:49,00:01:54,level 1,8 counts,,Peter Strom and Stacia Martin http://www.uptownswing.net,no coment yet
+reverse promenade,CF0KIsQR6A4,00:01:56,00:02:01,level 1,8 counts,,Peter Strom and Stacia Martin http://www.uptownswing.net,no coment yet
+cudle a.k.a wrap-in wrap-out,USXmK5QXwCc,00:02:19,00:02:26,level 1,6 counts,,Peter Strom and Stacia Martin http://www.uptownswing.net,no coment yet
+sweetheart,cjQIwvnfI3Q,00:02:21,00:02:29,level 1,6 counts,,Robert Royston,no coment yet
+belt slide a.k.a waist wrap,USXmK5QXwCc,00:00:56,00:01:00,level 1,6 counts,,Peter Strom and Stacia Martin http://www.uptownswing.net,no coment yet
+lindy hop basket,yR-H2MKsOTM,00:02:28,00:02:36,level 1,8 counts,,Delilah Williams and Kenny Nelson,no coment yet
+tandem charleston,hlkp-XMeQOM,00:01:05,00:01:22,level 1,8 counts,,Jessie Pats and Spencer Weisbond,no coment yet
+tandem charleston2,jU0NWSu2x0o,00:00:28,00:00:37,level 1,8 counts,,Iris Tarou and Manu Smith  http://www.920special.com,no coment yet
+tandem - windshield wiper,jU0NWSu2x0o,00:00:35,00:00:46,level 1,8 counts,,Iris Tarou and Manu Smith  http://www.920special.com,no coment yet
+tandem - follower turn,jU0NWSu2x0o,00:00:49,00:00:57,level 1,8 counts,,Iris Tarou and Manu Smith  http://www.920special.com,no coment yet
+tandem - push away exit,jU0NWSu2x0o,00:00:59,00:01:07,level 1,8 counts,,Iris Tarou and Manu Smith  http://www.920special.com,no coment yet
+airplane charleston,-eQaOZXJdkA,00:00:19,00:00:30,level 1,8 counts,,Delilah Williams and Kenny Nelson,no coment yet
+s-turn into tandem charleston,5MEfGPNf3nE,00:00:33,00:00:43,level 1,8 counts,,Kenny Nelson and Jesse Hanus   http://www.madverve.com/ http://www.jessehanus.com,no coment yet
+scoots,0nbTtgY-aQ8,00:00:31,00:00:41,level 1,8 counts,,Peter Strom and Stacia Martin http://www.uptownswing.net,no coment yet
+scoots,HYcuxW5_ilg,00:00:31,00:00:41,level 1,8 counts,,Peter Strom and Liz http://www.uptownswing.net,no coment yet
+twist around,Dt4DYHQ-yYE,00:00:51,00:01:00,level 1,8 counts,,Jesse Hanus and Alex Burr,no coment yet
+twist,ZHdXSX0pbp4,00:00:21,00:00:29,level 1,8 counts,,Graeme and Amanda,no coment yet
+traveling charleston,aoMux5a-32c,00:00:21,00:00:34,level 1,8 counts,,,no coment yet
+slide drag dig,mLkkUDXE65Y,00:02:20,00:02:26,level 2,8 counts,,Jesse Hanus and Mike Thibault,no coment yet
+tandem - Side by Side Skates,gnfTt8eqHgQ,00:00:34,00:00:47,level 2,8 counts,,Ali Taghavi and Katja Uckermann http://www.swingstep.com and http://www.aliandkatja.com/,no coment yet
+scissor kicks,Hk3ICwPsgbU,00:00:48,00:00:54,level 2,8 counts,,Patrick Szmidt and Natasha Ouimet,no coment yet
+peel away,XsV7uIbozNA,00:01:14,00:01:19,level 2,8 counts,,Ann Mony and Manu Smith,no coment yet
+pass by,YIiYOJWo87o,00:00:07,00:00:14,level 1,6 counts,,Jo Hoffberg and Kevin St. Laurent,no coment yet
+mini dip,WWBWpZQ8ixs,00:02:32,00:02:39,level 1,8 counts,,Simon and Natasya http://www.theswingstation.co.nz,no coment yet
+jump out,mLkkUDXE65Y,00:01:53,00:02:00,level 1,8 counts,,Jesse Hanus and Mike Thibault,no coment yet
+johnnys drop,QRb9mO9DTY0,00:00:26,00:00:30,level 1,8 counts,,,no coment yet
+down the line,mLkkUDXE65Y,0:01:03,00:01:14,level 2,8 counts,,Jesse Hanus and Mike Thibault,no coment yet
+final step,mLkkUDXE65Y,00:02:59,00:03:05,level 2,8 counts,,Jesse Hanus and Mike Thibault,no coment yet
+the hawk,9KtXIEEfwgs,00:00:33,00:00:40,level 2,10 counts,,Lucy Falkner & Eric Shaw http://www.rhythmcity.ca,no coment yet
+the slingshot,9KtXIEEfwgs,00:00:46,00:00:54,level 2,8 counts,,Lucy Falkner & Eric Shaw http://www.rhythmcity.ca,no coment yet
+eric's 10 counts move,9KtXIEEfwgs,00:00:58,00:01:03,level 2,10 counts,,Lucy Falkner & Eric Shaw http://www.rhythmcity.ca,no coment yet
+getting into front to front 20s Charleston,2A-m9l6yUiw,00:00:28,00:00:45,level 2,8 counts,,Ann Mony and Nicole Frydman,no coment yet
+hacksaw from 20s charleston,2A-m9l6yUiw,00:01:37,00:01:52,level 2,8 counts,,Ann Mony and Nicole Frydman,no coment yet
