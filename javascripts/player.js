@@ -206,16 +206,53 @@ if ($.urlParam('source')=='google_spreadsheet')
 	{
 	spreadsheet_link='https://docs.google.com/spreadsheets/d/'+$.urlParam('id');
 
-$.ajax({
-	  dataType: "json",
-	  url: 'https://spreadsheets.google.com/feeds/list/'+$.urlParam('id')+'/default/public/values?alt=json',
-		success: function(json) {    
-			listmovesJson=json.feed.entry   
+	sheetsNamesHtml=''
 
+	if ($.urlParam('sheet'))
+        {sheetNumber=parseInt($.urlParam('sheet'))}
+	else
+	{sheetNumber=1}
+
+	$.ajax({
+	  dataType: "json",
+	  url: 'https://spreadsheets.google.com/feeds/worksheets/'+$.urlParam('id')+'/public/full?alt=json',
+		success: function(json) {  
+		  
+			listSheetsJson=json.feed.entry  
 
 			
-			var columns=[]
+			
+			listSheets=[]
+			for	(index = 0; index < listSheetsJson.length; index++) {
+				sheetJson=listSheetsJson[index]
+				sheetName=sheetJson.title['$t']
+				href=$.query.set("sheet", index+1).toString()
+				if (index+1==sheetNumber)
+				{sheetsNamesHtml+="<a class='dancename' id='selecteddance'  href='"+href+"' > "+ sheetName+" </a>"}
+				else
+				{sheetsNamesHtml+="<a class='dancename'  href='"+href+"' >"+ sheetName+"</a> "}
+				console.log(sheetsNamesHtml)
+				console.log(sheetJson.link[0]['href'])
+			}
+			$("#sheets").html(sheetsNamesHtml);
+			},	 
 
+    	   error: function(e) {
+       			console.log(e.message);}
+	});
+	
+	
+	
+
+	
+
+
+	$.ajax({
+	  dataType: "json",
+	  url: 'https://spreadsheets.google.com/feeds/list/'+$.urlParam('id')+'/'+sheetNumber+'/public/values?alt=json',
+		success: function(json) {    
+			listmovesJson=json.feed.entry   
+			var columns=[]
 			for (k in listmovesJson[0]){
 			if (k.substring(0, 4)==='gsx$'){
 					columns.push(k.substring(4))
@@ -227,13 +264,10 @@ $.ajax({
 				move={}
 				for	(i = 0; i < columns.length; i++) {
 					move[columns[i]]=moveJson['gsx$'+columns[i]].$t
-					}
-				
+					}				
 				listmoves.push(move);
 			}
-
 			createMoveTable(columns,listmoves);
-
 			},
     		error: function(e) {
        			console.log(e.message);}
