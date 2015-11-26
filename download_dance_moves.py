@@ -154,6 +154,7 @@ if v=='1' or v=='2':
 elif v=='3':
     spid =raw_input(' Enter the speadsheet id (part of the url following https://docs.google.com/spreadsheets/d/): ')
     url = 'https://spreadsheets.google.com/feeds/list/'+spid+'/default/public/values?alt=json'
+    #'https://spreadsheets.google.com/feeds/worksheets/'+spid+'/public/full?alt=json'# to get the list of sheet in the spreadsheet
     print ' Getting data from '  +url      
     
     jsonfile = urllib2.urlopen(url)
